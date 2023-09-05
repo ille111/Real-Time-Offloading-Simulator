@@ -175,7 +175,7 @@ async fn handle_task(
     mut task: Task,
     socket: &Arc<Mutex<tokio::net::tcp::OwnedWriteHalf>>,
     schedule: &Arc<Mutex<Box<dyn Schedule + Send>>>,
-    delay_factor: f64,
+    _delay_factor: f64,
 ) {
     let empty_map: HashMap<String, String> = HashMap::new();
     let task_id = task.id();
@@ -269,7 +269,7 @@ async fn handle_task(
             }
         };
         check_overdue(&schedule).await;
-    }
+//    }
     let resp_s = bincode::serialize(&resp).unwrap();
     socket.lock().await.write(&resp_s).await.unwrap();
 }
