@@ -13,13 +13,14 @@ from mininet.clean import cleanup  # type: ignore
 RUNTIME = 30
 SEED = 0
 
-
 parser = argparse.ArgumentParser()# Add an argument
 parser.add_argument('--ntasks', type=int, required=True)
 parser.add_argument('--uf', type=float, required=True)
+parser.add_argument('-b', action='store_true')
+parser.add_argument('--log_dir', type=str, required=True)
 args = parser.parse_args()
 
-def scenario(net, log_dir):
+def scenario(net, log_dir, code_dir):
     n_clients = 10
     client_delay = '30ms'
     client_jitter = '0ms'
@@ -95,7 +96,7 @@ def scenario(net, log_dir):
     scheduler_host.log_path = log_path
     scheduler_host.sendCmd(
         f'RUST_LOG=trace '
-        f'../code/target/release/scheduler '
+        f'{code_dir}scheduler '
         f'{scheduler_port} {sched_algo} {sched_delay_factor} '
         f'2>&1 >/dev/null | grep --line-buffered -v "mio::poll" '
         f'>> {log_path}'
@@ -108,7 +109,7 @@ def scenario(net, log_dir):
         worker_host.log_path = log_path
         worker_host.sendCmd(
             f'RUST_LOG=trace '
-            f'../code/target/release/worker '
+            f'{code_dir}worker '
             f'{scheduler_ip}:{scheduler_port} '
             f'../tasks/target/task '
             f'2>&1 >/dev/null | grep --line-buffered -v "mio::poll" '
@@ -123,7 +124,7 @@ def scenario(net, log_dir):
         client_host.log_path = log_path
         client_host.sendCmd(
             f'RUST_LOG=trace '
-            f'../code/target/release/client '
+            f'{code_dir}client '
             f'{scheduler_ip}:{scheduler_port} '
             f'{client_task_wcet_ms} '
             f'{client_task_slack_time_mean_ms} '
@@ -140,10 +141,17 @@ def main():
     if SEED > 0:
         random.seed(SEED)
 
-    log_dir = os.path.join(
-        os.path.dirname(os.path.realpath(__file__)),
-        f'{__file__.replace(".py", "")}_logs',
-    )
+    if args.b:
+        code_dir = "../baseline_code/target/release/"
+    else:
+        code_dir =  "../code/target/release/"
+
+    #log_dir = os.path.join(
+    #    os.path.dirname(os.path.realpath(__file__)),
+    #    f'{__file__.replace(".py", "")}_logs',
+    #)
+
+    log_dir = args.log_dir
     info(f'*** Saving logs to: {log_dir}\n')
     try:
         os.mkdir(log_dir)
@@ -161,7 +169,7 @@ def main():
     info('*** Adding controller\n')
     net.addController('c0')
 
-    scenario(net, log_dir)
+    scenario(net, log_dir, code_dir)
 
     info(f'*** Running for {RUNTIME} seconds\n')
     sleep(RUNTIME)
