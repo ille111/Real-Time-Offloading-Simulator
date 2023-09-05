@@ -34,5 +34,5 @@ python3 scale_tasks.py --ntasks=50 --uf=1.0 -b --logdir=/home/mininet/Real-Time-
 
 for d in */ ; do
 	echo "Running Analysis for $d!\n"
-	poetry run python3 ../analysis.py "$d"
+	poetry run python3 ../analysis.py "$d" >> "$d.txt"
 done
