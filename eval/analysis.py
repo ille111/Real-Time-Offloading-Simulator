@@ -1,6 +1,7 @@
 import os
 import json
 import argparse
+import csv
 import pandas as pd  # type: ignore
 import datetime as dt
 from pprint import pp
@@ -389,7 +390,18 @@ def analysis(log_path):
         '\\end{table}\n'
         '\\end{center}\n'
     )
+    ntasks = log_path.split('_')[-2]
+    uf = log_path.split('_')[-1]
+    acceptance_rate = (task_accepted_count/task_total_count):.2f
+    hit_rate = (deadline_meet_count/task_accepted_count):.2f
+    util = total_mean:.2f
+    sub_laxity = slack_time_initial_mean:.4f
+    compl_laxity = slack_time_on_completion_mean:.4f
 
+    result_list=[ntasks, uf, acceptance_rate, hit_rate, util, sub_laxity, compl_laxity]
+    with open("results.csv", mode='a') as csv_file:
+        csv_writer = csv.writer(csv_file, delimeter=',')
+        csv_writer.writerow(result_list)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
