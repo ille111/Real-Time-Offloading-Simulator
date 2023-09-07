@@ -33,6 +33,6 @@
 
 
 for d in middlewedge_experiments/*/ ; do
-	echo "Running Analysis for $d!\n"
-	poetry run python3 analysis.py "$d" >> "$d.txt"
+	echo "Running Analysis for $d"
+	poetry run python3 analysis.py "$d" > "$d.txt"
 done

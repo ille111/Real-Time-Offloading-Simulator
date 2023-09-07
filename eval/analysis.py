@@ -391,16 +391,16 @@ def analysis(log_path):
         '\\end{center}\n'
     )
     ntasks = log_path.split('_')[-2]
-    uf = log_path.split('_')[-1]
-    acceptance_rate = (task_accepted_count/task_total_count):.2f
-    hit_rate = (deadline_meet_count/task_accepted_count):.2f
-    util = total_mean:.2f
-    sub_laxity = slack_time_initial_mean:.4f
-    compl_laxity = slack_time_on_completion_mean:.4f
+    uf = log_path.split('_')[-1][:-1]
+    acceptance_rate = task_accepted_count/task_total_count
+    hit_rate = deadline_meet_count/task_accepted_count
+    util = total_mean
+    sub_laxity = slack_time_initial_mean
+    compl_laxity = slack_time_on_completion_mean
 
     result_list=[ntasks, uf, acceptance_rate, hit_rate, util, sub_laxity, compl_laxity]
     with open("results.csv", mode='a') as csv_file:
-        csv_writer = csv.writer(csv_file, delimeter=',')
+        csv_writer = csv.writer(csv_file, delimiter=',')
         csv_writer.writerow(result_list)
 
 if __name__ == '__main__':
