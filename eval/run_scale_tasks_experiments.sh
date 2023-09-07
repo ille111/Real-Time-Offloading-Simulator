@@ -33,6 +33,6 @@ python3 scale_tasks.py --ntasks=50 --uf=1.0 -b --log_dir=/home/mininet/Real-Time
 
 
 for d in middlewedge_experiments/*/ ; do
-	echo "Running Analysis for $d"
-	poetry run python3 analysis.py "$d" > "$d.txt"
+	echo "Running Analysis for ${d/}.txt"
+	poetry run python3 analysis.py "$d" > "${d/}.txt"
 done
