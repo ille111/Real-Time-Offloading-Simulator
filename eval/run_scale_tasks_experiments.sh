@@ -30,9 +30,3 @@ python3 middlewedge_experiments/scale_tasks.py --ntasks=30 --uf=1.0 -b --log_dir
 python3 middlewedge_experiments/scale_tasks.py --ntasks=40 --uf=1.0 -b --log_dir=/home/mininet/Real-Time-Offloading-Simulator/eval/middlewedge_experiments/scale_tasks_40_b
 python3 middlewedge_experiments/scale_tasks.py --ntasks=50 --uf=1.0 -b --log_dir=/home/mininet/Real-Time-Offloading-Simulator/eval/middlewedge_experiments/scale_tasks_50_b
 
-
-
-for d in middlewedge_experiments/*/ ; do
-	echo "Running Analysis for ${d/}.txt"
-	poetry run python3 analysis.py "$d" > "${d/}.txt"
-done
