@@ -398,7 +398,7 @@ def analysis(log_path):
     sub_laxity = slack_time_initial_mean
     compl_laxity = slack_time_on_completion_mean
 
-    result_list=[ntasks, task_total_count, uf, acceptance_rate, hit_rate, util, sub_laxity, compl_laxity]
+    result_list=[ntasks, task_total_count, uf, acceptance_rate, hit_rate, util, sub_laxity, compl_laxity, log_path.split('/')[-2]]
     with open("results.csv", mode='a') as csv_file:
         csv_writer = csv.writer(csv_file, delimiter=',')
         csv_writer.writerow(result_list)
