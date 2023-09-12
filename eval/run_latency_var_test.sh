@@ -20,9 +20,9 @@ python3 middlewedge_experiments/latency_var_test.py --var=40 --uf=4.0 --log_dir=
 python3 middlewedge_experiments/latency_var_test.py --var=60 --uf=4.0 --log_dir=/home/mininet/Real-Time-Offloading-Simulator/eval/middlewedge_experiments/var_test_60_4
 python3 middlewedge_experiments/latency_var_test.py --var=80 --uf=4.0 --log_dir=/home/mininet/Real-Time-Offloading-Simulator/eval/middlewedge_experiments/var_test_80_4
 python3 middlewedge_experiments/latency_var_test.py --var=100 --uf=4.0 --log_dir=/home/mininet/Real-Time-Offloading-Simulator/eval/middlewedge_experiments/var_test_100_4
-python3 middlewedge_experiments/latency_var_test.py --var=20 --uf=1.0 -b --log_dir=/home/mininet/Real-Time-Offloading-Simulator/eval/middlewedge_experiments/laxity_test_20_b
-python3 middlewedge_experiments/latency_var_test.py --var=40 --uf=1.0 -b --log_dir=/home/mininet/Real-Time-Offloading-Simulator/eval/middlewedge_experiments/laxity_test_40_b
-python3 middlewedge_experiments/latency_var_test.py --var=60 --uf=1.0 -b --log_dir=/home/mininet/Real-Time-Offloading-Simulator/eval/middlewedge_experiments/laxity_test_60_b
-python3 middlewedge_experiments/latency_var_test.py --var=80 --uf=1.0 -b --log_dir=/home/mininet/Real-Time-Offloading-Simulator/eval/middlewedge_experiments/laxity_test_80_b
-python3 middlewedge_experiments/latency_var_test.py --var=100 --uf=1.0 -b --log_dir=/home/mininet/Real-Time-Offloading-Simulator/eval/middlewedge_experiments/laxity_test_100_b
+python3 middlewedge_experiments/latency_var_test.py --var=20 --uf=1.0 -b --log_dir=/home/mininet/Real-Time-Offloading-Simulator/eval/middlewedge_experiments/var_test_20_b
+python3 middlewedge_experiments/latency_var_test.py --var=40 --uf=1.0 -b --log_dir=/home/mininet/Real-Time-Offloading-Simulator/eval/middlewedge_experiments/var_test_40_b
+python3 middlewedge_experiments/latency_var_test.py --var=60 --uf=1.0 -b --log_dir=/home/mininet/Real-Time-Offloading-Simulator/eval/middlewedge_experiments/var_test_60_b
+python3 middlewedge_experiments/latency_var_test.py --var=80 --uf=1.0 -b --log_dir=/home/mininet/Real-Time-Offloading-Simulator/eval/middlewedge_experiments/var_test_80_b
+python3 middlewedge_experiments/latency_var_test.py --var=100 --uf=1.0 -b --log_dir=/home/mininet/Real-Time-Offloading-Simulator/eval/middlewedge_experiments/var_test_100_b
 
