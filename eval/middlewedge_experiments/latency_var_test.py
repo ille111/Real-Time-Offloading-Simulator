@@ -14,18 +14,17 @@ RUNTIME = 30
 SEED = 0
 
 parser = argparse.ArgumentParser()# Add an argument
-parser.add_argument('--nclients', type=int, required=True)
+parser.add_argument('--var', type=int, required=True)
 parser.add_argument('--uf', type=float, required=True)
 parser.add_argument('-b', action='store_true')
 parser.add_argument('--log_dir', type=str, required=True)
 args = parser.parse_args()
 
 def scenario(net, log_dir, code_dir):
-    n_clients = args.nclients
-    n_tasks = 1
-    client_delay = '30ms'
-    client_jitter = '0ms'
-    client_poisson_lambda = 1.0
+    n_clients = 10
+    client_delay = '50ms'
+    client_jitter = args.var
+    client_poisson_lambda = 3.0
     client_payload_bytes = 100
     client_task_wcet_ms = 100
     client_task_slack_time_mean_ms = 100
