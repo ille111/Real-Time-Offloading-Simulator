@@ -1,233 +1,169 @@
-[2023-09-12T12:51:12.111079Z DEBUG client] Connecting to scheduler at 10.0.0.1:1337...
-[2023-09-12T12:51:12.293857Z DEBUG client] Connected to scheduler at 10.0.0.1:1337
-[2023-09-12T12:51:12.293868Z DEBUG client] Slack time mean: 100 variance: 33.333333333333336
-[2023-09-12T12:51:12.293875Z DEBUG client] Slack time ms: 86.44174860594526
-[2023-09-12T12:51:12.293879Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 8dd1a615-ebc8-49ac-9dc4-959046bd72e9 {"time_to_deadline_secs":"0.186441207","deadline":"1694523072.4803178","exec_time_secs":"0.1","slack_time_secs":"0.086441207","return_data_bytes":"100"}
-[2023-09-12T12:51:12.293888Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 8dd1a615-ebc8-49ac-9dc4-959046bd72e9 {"exec_time_secs":"0.1","slack_time_secs":"0.086430791","time_to_deadline_secs":"0.186430791","return_data_bytes":"100","deadline":"1694523072.4803178"}
-[2023-09-12T12:51:12.355024Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted 8dd1a615-ebc8-49ac-9dc4-959046bd72e9 {}
-[2023-09-12T12:51:12.481450Z DEBUG client] Task 8dd1a615-ebc8-49ac-9dc4-959046bd72e9 exec time was 1.074502ms shorter than expected, adding diff to receive time
-[2023-09-12T12:51:12.481582Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedAfterDeadline 8dd1a615-ebc8-49ac-9dc4-959046bd72e9 {"time_to_deadline_secs":"-0.002205419","deadline":"1694523072.4803178","return_data_bytes":"100","exec_time_secs":"0.098925498","initial_slack_time_secs":"0.08644174860594526"}
-[2023-09-12T12:51:12.481625Z DEBUG client] Sleeping for 1.175603121s...
-[2023-09-12T12:51:13.659002Z DEBUG client] Slack time ms: 80.81490020018518
-[2023-09-12T12:51:13.659017Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 0c7b98b3-9dd8-4fd0-99cf-5d642b6d94f0 {"time_to_deadline_secs":"0.180814192","exec_time_secs":"0.1","slack_time_secs":"0.080814192","deadline":"1694523073.8398273","return_data_bytes":"100"}
-[2023-09-12T12:51:13.659028Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 0c7b98b3-9dd8-4fd0-99cf-5d642b6d94f0 {"slack_time_secs":"0.080800484","exec_time_secs":"0.1","time_to_deadline_secs":"0.180800484","return_data_bytes":"100","deadline":"1694523073.8398273"}
-[2023-09-12T12:51:13.719863Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskRejected 0c7b98b3-9dd8-4fd0-99cf-5d642b6d94f0 {"error_message":"Task arrived with insufficient time for execution"}
-[2023-09-12T12:51:13.719874Z DEBUG client] Sleeping 119.953606ms until deadline of rejected task
-[2023-09-12T12:51:13.841215Z DEBUG client] Sleeping for 0ns...
-[2023-09-12T12:51:13.841247Z DEBUG client] Slack time ms: 105.69086778120955
-[2023-09-12T12:51:13.841255Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 63be0040-6bd5-4d63-b80e-fd64678c2173 {"slack_time_secs":"0.10568966","return_data_bytes":"100","time_to_deadline_secs":"0.20568966","deadline":"1694523074.0469408","exec_time_secs":"0.1"}
-[2023-09-12T12:51:13.841273Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 63be0040-6bd5-4d63-b80e-fd64678c2173 {"slack_time_secs":"0.105670452","exec_time_secs":"0.1","return_data_bytes":"100","deadline":"1694523074.0469408","time_to_deadline_secs":"0.205670452"}
-[2023-09-12T12:51:13.902865Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted 63be0040-6bd5-4d63-b80e-fd64678c2173 {}
-[2023-09-12T12:51:14.028191Z DEBUG client] Task 63be0040-6bd5-4d63-b80e-fd64678c2173 exec time was 410.445µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:14.028207Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline 63be0040-6bd5-4d63-b80e-fd64678c2173 {"initial_slack_time_secs":"0.10569086778120955","time_to_deadline_secs":"0.019160445","deadline":"1694523074.0469408","exec_time_secs":"0.100410445","return_data_bytes":"100"}
-[2023-09-12T12:51:14.028217Z DEBUG client] Sleeping for 674.354056ms...
-[2023-09-12T12:51:14.708375Z DEBUG client] Slack time ms: 105.6967987606024
-[2023-09-12T12:51:14.708393Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated b2b39f69-2248-4096-a6cc-5686c155f831 {"slack_time_secs":"0.105695174","exec_time_secs":"0.1","deadline":"1694523074.9140859","time_to_deadline_secs":"0.205695174","return_data_bytes":"100"}
-[2023-09-12T12:51:14.708407Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted b2b39f69-2248-4096-a6cc-5686c155f831 {"time_to_deadline_secs":"0.205680133","exec_time_secs":"0.1","slack_time_secs":"0.105680133","return_data_bytes":"100","deadline":"1694523074.9140859"}
-[2023-09-12T12:51:14.769641Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted b2b39f69-2248-4096-a6cc-5686c155f831 {}
-[2023-09-12T12:51:14.894309Z DEBUG client] Task b2b39f69-2248-4096-a6cc-5686c155f831 exec time was 610.648µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:14.894321Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline b2b39f69-2248-4096-a6cc-5686c155f831 {"exec_time_secs":"0.100610648","time_to_deadline_secs":"0.020387639","return_data_bytes":"100","initial_slack_time_secs":"0.10569679876060241","deadline":"1694523074.9140859"}
-[2023-09-12T12:51:14.894331Z DEBUG client] Sleeping for 2.446054315s...
-[2023-09-12T12:51:17.343885Z DEBUG client] Slack time ms: 155.57206464297946
-[2023-09-12T12:51:17.343911Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated cc3d2f32-8514-48d4-b95e-96a12217e9f8 {"slack_time_secs":"0.155570815","exec_time_secs":"0.1","deadline":"1694523077.5994773","return_data_bytes":"100","time_to_deadline_secs":"0.255570815"}
-[2023-09-12T12:51:17.343933Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted cc3d2f32-8514-48d4-b95e-96a12217e9f8 {"time_to_deadline_secs":"0.255546482","deadline":"1694523077.5994773","return_data_bytes":"100","slack_time_secs":"0.155546482","exec_time_secs":"0.1"}
-[2023-09-12T12:51:17.404468Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted cc3d2f32-8514-48d4-b95e-96a12217e9f8 {}
-[2023-09-12T12:51:17.505811Z DEBUG client] Task cc3d2f32-8514-48d4-b95e-96a12217e9f8 exec time was 595.4µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:17.505825Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline cc3d2f32-8514-48d4-b95e-96a12217e9f8 {"exec_time_secs":"0.1005954","return_data_bytes":"100","initial_slack_time_secs":"0.15557206464297946","time_to_deadline_secs":"0.094263447","deadline":"1694523077.5994773"}
-[2023-09-12T12:51:17.505838Z DEBUG client] Sleeping for 61.938273ms...
-[2023-09-12T12:51:17.569864Z DEBUG client] Slack time ms: 79.56854652078567
-[2023-09-12T12:51:17.569879Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 16665d4d-799b-47db-90c5-63e1cf21feb0 {"time_to_deadline_secs":"0.179567297","return_data_bytes":"100","exec_time_secs":"0.1","slack_time_secs":"0.079567297","deadline":"1694523077.7494428"}
-[2023-09-12T12:51:17.569891Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 16665d4d-799b-47db-90c5-63e1cf21feb0 {"time_to_deadline_secs":"0.179552714","exec_time_secs":"0.1","slack_time_secs":"0.079552714","deadline":"1694523077.7494428","return_data_bytes":"100"}
-[2023-09-12T12:51:17.630084Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskRejected 16665d4d-799b-47db-90c5-63e1cf21feb0 {"error_message":"Task arrived with insufficient time for execution"}
-[2023-09-12T12:51:17.630101Z DEBUG client] Sleeping 119.341946ms until deadline of rejected task
-[2023-09-12T12:51:17.750383Z DEBUG client] Sleeping for 241.803783ms...
-[2023-09-12T12:51:17.993911Z DEBUG client] Slack time ms: 126.70215365066478
-[2023-09-12T12:51:17.993924Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated a62da8bb-50ab-4abf-9bce-4746b86640b3 {"return_data_bytes":"100","deadline":"1694523078.220623","exec_time_secs":"0.1","slack_time_secs":"0.126701404","time_to_deadline_secs":"0.226701404"}
-[2023-09-12T12:51:17.993935Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted a62da8bb-50ab-4abf-9bce-4746b86640b3 {"deadline":"1694523078.220623","exec_time_secs":"0.1","slack_time_secs":"0.126688696","time_to_deadline_secs":"0.226688696","return_data_bytes":"100"}
-[2023-09-12T12:51:18.057753Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted a62da8bb-50ab-4abf-9bce-4746b86640b3 {}
-[2023-09-12T12:51:18.158212Z DEBUG client] Task a62da8bb-50ab-4abf-9bce-4746b86640b3 exec time was 609.316µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:18.158225Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline a62da8bb-50ab-4abf-9bce-4746b86640b3 {"exec_time_secs":"0.100609316","deadline":"1694523078.220623","time_to_deadline_secs":"0.063021422","return_data_bytes":"100","initial_slack_time_secs":"0.12670215365066478"}
-[2023-09-12T12:51:18.158237Z DEBUG client] Sleeping for 33.92413ms...
-[2023-09-12T12:51:18.193447Z DEBUG client] Slack time ms: 114.40092886706334
-[2023-09-12T12:51:18.193458Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 66990500-7a33-4c02-b3e6-211f3b38cfe2 {"exec_time_secs":"0.1","return_data_bytes":"100","slack_time_secs":"0.114400179","time_to_deadline_secs":"0.214400179","deadline":"1694523078.407856"}
-[2023-09-12T12:51:18.193468Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 66990500-7a33-4c02-b3e6-211f3b38cfe2 {"exec_time_secs":"0.1","slack_time_secs":"0.11438893","deadline":"1694523078.407856","time_to_deadline_secs":"0.21438893","return_data_bytes":"100"}
-[2023-09-12T12:51:18.254598Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted 66990500-7a33-4c02-b3e6-211f3b38cfe2 {}
-[2023-09-12T12:51:18.354953Z DEBUG client] Task 66990500-7a33-4c02-b3e6-211f3b38cfe2 exec time was 797.895µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:18.354966Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline 66990500-7a33-4c02-b3e6-211f3b38cfe2 {"initial_slack_time_secs":"0.11440092886706334","time_to_deadline_secs":"0.053701589","deadline":"1694523078.407856","exec_time_secs":"0.100797895","return_data_bytes":"100"}
-[2023-09-12T12:51:18.354977Z DEBUG client] Sleeping for 138.444679ms...
-[2023-09-12T12:51:18.494393Z DEBUG client] Slack time ms: 133.3818820804433
-[2023-09-12T12:51:18.494407Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 6bd913b9-f22f-4618-b3e6-8f3059c4d48d {"time_to_deadline_secs":"0.23338059","deadline":"1694523078.7277856","slack_time_secs":"0.13338059","return_data_bytes":"100","exec_time_secs":"0.1"}
-[2023-09-12T12:51:18.494420Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 6bd913b9-f22f-4618-b3e6-8f3059c4d48d {"deadline":"1694523078.7277856","time_to_deadline_secs":"0.233366924","return_data_bytes":"100","exec_time_secs":"0.1","slack_time_secs":"0.133366924"}
-[2023-09-12T12:51:18.557723Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted 6bd913b9-f22f-4618-b3e6-8f3059c4d48d {}
-[2023-09-12T12:51:18.656880Z DEBUG client] Task 6bd913b9-f22f-4618-b3e6-8f3059c4d48d exec time was 465.153µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:18.656895Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline 6bd913b9-f22f-4618-b3e6-8f3059c4d48d {"return_data_bytes":"100","initial_slack_time_secs":"0.1333818820804433","deadline":"1694523078.7277856","exec_time_secs":"0.100465153","time_to_deadline_secs":"0.071371904"}
-[2023-09-12T12:51:18.656910Z DEBUG client] Sleeping for 898.033913ms...
-[2023-09-12T12:51:19.555319Z DEBUG client] Slack time ms: 61.41033308330899
-[2023-09-12T12:51:19.555334Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated af5e24ae-c957-4f2a-bb5b-d2319be444a3 {"exec_time_secs":"0.1","return_data_bytes":"100","deadline":"1694523079.7167413","slack_time_secs":"0.061409625","time_to_deadline_secs":"0.161409625"}
-[2023-09-12T12:51:19.555348Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted af5e24ae-c957-4f2a-bb5b-d2319be444a3 {"time_to_deadline_secs":"0.161394626","deadline":"1694523079.7167413","exec_time_secs":"0.1","slack_time_secs":"0.061394626","return_data_bytes":"100"}
-[2023-09-12T12:51:19.617615Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskRejected af5e24ae-c957-4f2a-bb5b-d2319be444a3 {"error_message":"Task arrived with insufficient time for execution"}
-[2023-09-12T12:51:19.617624Z DEBUG client] Sleeping 99.117237ms until deadline of rejected task
-[2023-09-12T12:51:19.717854Z DEBUG client] Sleeping for 1.166391842s...
-[2023-09-12T12:51:20.885526Z DEBUG client] Slack time ms: 121.96442169386503
-[2023-09-12T12:51:20.885559Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 30234561-7b7c-486e-8c1f-bdf909a54a93 {"slack_time_secs":"0.121962422","return_data_bytes":"100","deadline":"1694523081.1075149","time_to_deadline_secs":"0.221962422","exec_time_secs":"0.1"}
-[2023-09-12T12:51:20.885594Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 30234561-7b7c-486e-8c1f-bdf909a54a93 {"deadline":"1694523081.1075149","exec_time_secs":"0.1","time_to_deadline_secs":"0.221924048","slack_time_secs":"0.121924048","return_data_bytes":"100"}
-[2023-09-12T12:51:20.946495Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted 30234561-7b7c-486e-8c1f-bdf909a54a93 {}
-[2023-09-12T12:51:21.048182Z DEBUG client] Task 30234561-7b7c-486e-8c1f-bdf909a54a93 exec time was 653.941µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:21.048196Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline 30234561-7b7c-486e-8c1f-bdf909a54a93 {"exec_time_secs":"0.100653941","return_data_bytes":"100","deadline":"1694523081.1075149","initial_slack_time_secs":"0.12196442169386504","time_to_deadline_secs":"0.059987818"}
-[2023-09-12T12:51:21.048206Z DEBUG client] Sleeping for 521.540603ms...
-[2023-09-12T12:51:21.570229Z DEBUG client] Slack time ms: 76.70328190966403
-[2023-09-12T12:51:21.570246Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated c22e8296-c21d-4a5e-8dd0-536982ae8dc8 {"return_data_bytes":"100","time_to_deadline_secs":"0.176702365","slack_time_secs":"0.076702365","exec_time_secs":"0.1","deadline":"1694523081.746946"}
-[2023-09-12T12:51:21.570259Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted c22e8296-c21d-4a5e-8dd0-536982ae8dc8 {"time_to_deadline_secs":"0.176688615","slack_time_secs":"0.076688615","deadline":"1694523081.746946","exec_time_secs":"0.1","return_data_bytes":"100"}
-[2023-09-12T12:51:21.631633Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskRejected c22e8296-c21d-4a5e-8dd0-536982ae8dc8 {"error_message":"Task arrived with insufficient time for execution"}
-[2023-09-12T12:51:21.631642Z DEBUG client] Sleeping 115.303915ms until deadline of rejected task
-[2023-09-12T12:51:21.747692Z DEBUG client] Sleeping for 1.293764158s...
-[2023-09-12T12:51:23.042841Z DEBUG client] Slack time ms: 84.88554141539443
-[2023-09-12T12:51:23.042854Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated f8b50ba6-834d-4d62-b21d-eb636c11f07c {"time_to_deadline_secs":"0.184884499","exec_time_secs":"0.1","return_data_bytes":"100","deadline":"1694523083.2277365","slack_time_secs":"0.084884499"}
-[2023-09-12T12:51:23.042867Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted f8b50ba6-834d-4d62-b21d-eb636c11f07c {"deadline":"1694523083.2277365","slack_time_secs":"0.084870916","time_to_deadline_secs":"0.184870916","exec_time_secs":"0.1","return_data_bytes":"100"}
-[2023-09-12T12:51:23.103993Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted f8b50ba6-834d-4d62-b21d-eb636c11f07c {}
-[2023-09-12T12:51:23.205584Z DEBUG client] Task f8b50ba6-834d-4d62-b21d-eb636c11f07c exec time was 467.321µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:23.205595Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline f8b50ba6-834d-4d62-b21d-eb636c11f07c {"initial_slack_time_secs":"0.08488554141539442","deadline":"1694523083.2277365","time_to_deadline_secs":"0.022620776","exec_time_secs":"0.100467321","return_data_bytes":"100"}
-[2023-09-12T12:51:23.205606Z DEBUG client] Sleeping for 307.580184ms...
-[2023-09-12T12:51:23.515555Z DEBUG client] Slack time ms: 128.40650050597827
-[2023-09-12T12:51:23.515570Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated f15d472e-3881-4f80-9c3c-84e7f111f615 {"deadline":"1694523083.7439733","exec_time_secs":"0.1","slack_time_secs":"0.128405543","return_data_bytes":"100","time_to_deadline_secs":"0.228405543"}
-[2023-09-12T12:51:23.515582Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted f15d472e-3881-4f80-9c3c-84e7f111f615 {"deadline":"1694523083.7439733","slack_time_secs":"0.128392168","return_data_bytes":"100","time_to_deadline_secs":"0.228392168","exec_time_secs":"0.1"}
-[2023-09-12T12:51:23.575895Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted f15d472e-3881-4f80-9c3c-84e7f111f615 {}
-[2023-09-12T12:51:23.677857Z DEBUG client] Task f15d472e-3881-4f80-9c3c-84e7f111f615 exec time was 372.073µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:23.677890Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline f15d472e-3881-4f80-9c3c-84e7f111f615 {"deadline":"1694523083.7439733","exec_time_secs":"0.100372073","return_data_bytes":"100","time_to_deadline_secs":"0.06648877","initial_slack_time_secs":"0.12840650050597827"}
-[2023-09-12T12:51:23.677905Z DEBUG client] Sleeping for 1.995061909s...
-[2023-09-12T12:51:25.673908Z DEBUG client] Slack time ms: 117.2347195809002
-[2023-09-12T12:51:25.673923Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 1da93782-a029-4384-876d-568308bf2fb7 {"exec_time_secs":"0.1","slack_time_secs":"0.117234137","return_data_bytes":"100","deadline":"1694523085.8911548","time_to_deadline_secs":"0.217234137"}
-[2023-09-12T12:51:25.673933Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 1da93782-a029-4384-876d-568308bf2fb7 {"deadline":"1694523085.8911548","exec_time_secs":"0.1","time_to_deadline_secs":"0.217222845","slack_time_secs":"0.117222845","return_data_bytes":"100"}
-[2023-09-12T12:51:25.734199Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted 1da93782-a029-4384-876d-568308bf2fb7 {}
-[2023-09-12T12:51:25.835203Z DEBUG client] Task 1da93782-a029-4384-876d-568308bf2fb7 exec time was 349.657µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:25.835218Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline 1da93782-a029-4384-876d-568308bf2fb7 {"deadline":"1694523085.8911548","initial_slack_time_secs":"0.1172347195809002","time_to_deadline_secs":"0.05630205","return_data_bytes":"100","exec_time_secs":"0.100349657"}
-[2023-09-12T12:51:25.835229Z DEBUG client] Sleeping for 1.765610646s...
-[2023-09-12T12:51:27.601586Z DEBUG client] Slack time ms: 81.79136240610178
-[2023-09-12T12:51:27.601660Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 0f5a9db0-a838-43cc-897f-7ed9988210f9 {"return_data_bytes":"100","exec_time_secs":"0.1","deadline":"1694523087.7834463","slack_time_secs":"0.081790195","time_to_deadline_secs":"0.181790195"}
-[2023-09-12T12:51:27.601672Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 0f5a9db0-a838-43cc-897f-7ed9988210f9 {"exec_time_secs":"0.1","time_to_deadline_secs":"0.181774987","return_data_bytes":"100","slack_time_secs":"0.081774987","deadline":"1694523087.7834463"}
-[2023-09-12T12:51:27.665602Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskRejected 0f5a9db0-a838-43cc-897f-7ed9988210f9 {"error_message":"Task arrived with insufficient time for execution"}
-[2023-09-12T12:51:27.665613Z DEBUG client] Sleeping 117.832884ms until deadline of rejected task
-[2023-09-12T12:51:27.785351Z DEBUG client] Sleeping for 40.573876ms...
-[2023-09-12T12:51:27.826738Z DEBUG client] Slack time ms: 89.6905076752708
-[2023-09-12T12:51:27.826764Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 612f631d-2478-4773-9f32-2f1ad3ce592e {"time_to_deadline_secs":"0.189689675","exec_time_secs":"0.1","return_data_bytes":"100","deadline":"1694523088.0164516","slack_time_secs":"0.089689675"}
-[2023-09-12T12:51:27.826776Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 612f631d-2478-4773-9f32-2f1ad3ce592e {"return_data_bytes":"100","exec_time_secs":"0.1","deadline":"1694523088.0164516","time_to_deadline_secs":"0.189677175","slack_time_secs":"0.089677175"}
-[2023-09-12T12:51:27.887736Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted 612f631d-2478-4773-9f32-2f1ad3ce592e {}
-[2023-09-12T12:51:27.989310Z DEBUG client] Task 612f631d-2478-4773-9f32-2f1ad3ce592e exec time was 739.149µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:27.989324Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline 612f631d-2478-4773-9f32-2f1ad3ce592e {"initial_slack_time_secs":"0.0896905076752708","deadline":"1694523088.0164516","exec_time_secs":"0.100739149","return_data_bytes":"100","time_to_deadline_secs":"0.027881566"}
-[2023-09-12T12:51:27.989334Z DEBUG client] Sleeping for 1.219330706s...
-[2023-09-12T12:51:29.209795Z DEBUG client] Slack time ms: 63.08224248825616
-[2023-09-12T12:51:29.209813Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 21ae9fae-5c84-4d29-b5df-9f2aa34104f3 {"return_data_bytes":"100","exec_time_secs":"0.1","deadline":"1694523089.3728924","time_to_deadline_secs":"0.163081492","slack_time_secs":"0.063081492"}
-[2023-09-12T12:51:29.209823Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 21ae9fae-5c84-4d29-b5df-9f2aa34104f3 {"time_to_deadline_secs":"0.163069868","deadline":"1694523089.3728924","exec_time_secs":"0.1","return_data_bytes":"100","slack_time_secs":"0.063069868"}
-[2023-09-12T12:51:29.273407Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskRejected 21ae9fae-5c84-4d29-b5df-9f2aa34104f3 {"error_message":"Task arrived with insufficient time for execution"}
-[2023-09-12T12:51:29.273416Z DEBUG client] Sleeping 99.47634ms until deadline of rejected task
-[2023-09-12T12:51:29.377525Z DEBUG client] Sleeping for 112.604008ms...
-[2023-09-12T12:51:29.494785Z DEBUG client] Slack time ms: 121.9773444445554
-[2023-09-12T12:51:29.494856Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 80647ce6-8b40-42f7-8cc8-a21fd0568fd4 {"exec_time_secs":"0.1","time_to_deadline_secs":"0.221972636","slack_time_secs":"0.121972636","deadline":"1694523089.7168138","return_data_bytes":"100"}
-[2023-09-12T12:51:29.494922Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 80647ce6-8b40-42f7-8cc8-a21fd0568fd4 {"slack_time_secs":"0.121899429","return_data_bytes":"100","time_to_deadline_secs":"0.221899429","exec_time_secs":"0.1","deadline":"1694523089.7168138"}
-[2023-09-12T12:51:29.560957Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted 80647ce6-8b40-42f7-8cc8-a21fd0568fd4 {}
-[2023-09-12T12:51:29.665139Z DEBUG client] Task 80647ce6-8b40-42f7-8cc8-a21fd0568fd4 exec time was 1.23693ms longer than expected, subtract diff from receive time
-[2023-09-12T12:51:29.665154Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline 80647ce6-8b40-42f7-8cc8-a21fd0568fd4 {"return_data_bytes":"100","deadline":"1694523089.7168138","time_to_deadline_secs":"0.052913023","exec_time_secs":"0.10123693","initial_slack_time_secs":"0.1219773444445554"}
-[2023-09-12T12:51:29.665164Z DEBUG client] Sleeping for 79.092821ms...
-[2023-09-12T12:51:29.745789Z DEBUG client] Slack time ms: 102.92656855185223
-[2023-09-12T12:51:29.745805Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated f7ad70d3-96fa-4e51-b2c2-23991b131a25 {"time_to_deadline_secs":"0.202925777","exec_time_secs":"0.1","return_data_bytes":"100","slack_time_secs":"0.102925777","deadline":"1694523089.9487283"}
-[2023-09-12T12:51:29.745816Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted f7ad70d3-96fa-4e51-b2c2-23991b131a25 {"deadline":"1694523089.9487283","exec_time_secs":"0.1","time_to_deadline_secs":"0.202913319","slack_time_secs":"0.102913319","return_data_bytes":"100"}
-[2023-09-12T12:51:29.806989Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted f7ad70d3-96fa-4e51-b2c2-23991b131a25 {}
-[2023-09-12T12:51:29.907762Z DEBUG client] Task f7ad70d3-96fa-4e51-b2c2-23991b131a25 exec time was 379.95µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:29.907773Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline f7ad70d3-96fa-4e51-b2c2-23991b131a25 {"initial_slack_time_secs":"0.10292656855185223","deadline":"1694523089.9487283","exec_time_secs":"0.10037995","return_data_bytes":"100","time_to_deadline_secs":"0.041347038"}
-[2023-09-12T12:51:29.907782Z DEBUG client] Sleeping for 84.175997ms...
-[2023-09-12T12:51:29.993663Z DEBUG client] Slack time ms: 145.47735649063986
-[2023-09-12T12:51:29.993681Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated c445539f-076a-46f7-978d-95905bc6bfc8 {"deadline":"1694523090.2391527","time_to_deadline_secs":"0.245473898","exec_time_secs":"0.1","slack_time_secs":"0.145473898","return_data_bytes":"100"}
-[2023-09-12T12:51:29.993693Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted c445539f-076a-46f7-978d-95905bc6bfc8 {"exec_time_secs":"0.1","time_to_deadline_secs":"0.24546094","deadline":"1694523090.2391527","slack_time_secs":"0.14546094","return_data_bytes":"100"}
-[2023-09-12T12:51:30.053990Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted c445539f-076a-46f7-978d-95905bc6bfc8 {}
-[2023-09-12T12:51:30.155269Z DEBUG client] Task c445539f-076a-46f7-978d-95905bc6bfc8 exec time was 829.773µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:30.155282Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline c445539f-076a-46f7-978d-95905bc6bfc8 {"initial_slack_time_secs":"0.14547735649063986","time_to_deadline_secs":"0.084714473","deadline":"1694523090.2391527","exec_time_secs":"0.100829773","return_data_bytes":"100"}
-[2023-09-12T12:51:30.155293Z DEBUG client] Sleeping for 45.91895ms...
-[2023-09-12T12:51:30.202500Z DEBUG client] Slack time ms: 141.92659079643687
-[2023-09-12T12:51:30.202513Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated dafbcbba-56cf-4083-b5cf-0c79ccb404bd {"slack_time_secs":"0.141925883","return_data_bytes":"100","time_to_deadline_secs":"0.241925883","deadline":"1694523090.4444377","exec_time_secs":"0.1"}
-[2023-09-12T12:51:30.202523Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted dafbcbba-56cf-4083-b5cf-0c79ccb404bd {"slack_time_secs":"0.141915425","time_to_deadline_secs":"0.241915425","exec_time_secs":"0.1","deadline":"1694523090.4444377","return_data_bytes":"100"}
-[2023-09-12T12:51:30.263266Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted dafbcbba-56cf-4083-b5cf-0c79ccb404bd {}
-[2023-09-12T12:51:30.364310Z DEBUG client] Task dafbcbba-56cf-4083-b5cf-0c79ccb404bd exec time was 418.324µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:30.364328Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline dafbcbba-56cf-4083-b5cf-0c79ccb404bd {"time_to_deadline_secs":"0.080547222","return_data_bytes":"100","initial_slack_time_secs":"0.14192659079643688","deadline":"1694523090.4444377","exec_time_secs":"0.100418324"}
-[2023-09-12T12:51:30.364339Z DEBUG client] Sleeping for 791.234513ms...
-[2023-09-12T12:51:31.156426Z DEBUG client] Slack time ms: 99.02704294428794
-[2023-09-12T12:51:31.156438Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 5c53e6bb-28d6-4b76-a48d-885e0a3c8021 {"slack_time_secs":"0.099026418","return_data_bytes":"100","deadline":"1694523091.3554628","time_to_deadline_secs":"0.199026418","exec_time_secs":"0.1"}
-[2023-09-12T12:51:31.156448Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 5c53e6bb-28d6-4b76-a48d-885e0a3c8021 {"deadline":"1694523091.3554628","time_to_deadline_secs":"0.199016085","slack_time_secs":"0.099016085","exec_time_secs":"0.1","return_data_bytes":"100"}
-[2023-09-12T12:51:31.217447Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted 5c53e6bb-28d6-4b76-a48d-885e0a3c8021 {}
-[2023-09-12T12:51:31.317490Z DEBUG client] Task 5c53e6bb-28d6-4b76-a48d-885e0a3c8021 exec time was 497.281µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:31.317500Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline 5c53e6bb-28d6-4b76-a48d-885e0a3c8021 {"exec_time_secs":"0.100497281","return_data_bytes":"100","initial_slack_time_secs":"0.09902704294428794","deadline":"1694523091.3554628","time_to_deadline_secs":"0.038471239"}
-[2023-09-12T12:51:31.317510Z DEBUG client] Sleeping for 45.263546ms...
-[2023-09-12T12:51:31.364304Z DEBUG client] Slack time ms: 102.42415225803143
-[2023-09-12T12:51:31.364316Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 696fcded-4d50-4b1a-8e36-c0801e8c7be5 {"deadline":"1694523091.5667367","exec_time_secs":"0.1","slack_time_secs":"0.102422944","time_to_deadline_secs":"0.202422944","return_data_bytes":"100"}
-[2023-09-12T12:51:31.364327Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 696fcded-4d50-4b1a-8e36-c0801e8c7be5 {"return_data_bytes":"100","slack_time_secs":"0.102411152","deadline":"1694523091.5667367","time_to_deadline_secs":"0.202411152","exec_time_secs":"0.1"}
-[2023-09-12T12:51:31.428036Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted 696fcded-4d50-4b1a-8e36-c0801e8c7be5 {}
-[2023-09-12T12:51:31.529703Z DEBUG client] Task 696fcded-4d50-4b1a-8e36-c0801e8c7be5 exec time was 448.532µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:31.529733Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline 696fcded-4d50-4b1a-8e36-c0801e8c7be5 {"initial_slack_time_secs":"0.10242415225803142","deadline":"1694523091.5667367","time_to_deadline_secs":"0.03748328","exec_time_secs":"0.100448532","return_data_bytes":"100"}
-[2023-09-12T12:51:31.529751Z DEBUG client] Sleeping for 234.583368ms...
-[2023-09-12T12:51:31.766139Z DEBUG client] Slack time ms: 147.22807192671095
-[2023-09-12T12:51:31.766153Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated d31406bc-13ed-4d87-99a5-65b305e7a31c {"slack_time_secs":"0.147227322","return_data_bytes":"100","deadline":"1694523092.0133781","exec_time_secs":"0.1","time_to_deadline_secs":"0.247227322"}
-[2023-09-12T12:51:31.766163Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted d31406bc-13ed-4d87-99a5-65b305e7a31c {"exec_time_secs":"0.1","deadline":"1694523092.0133781","time_to_deadline_secs":"0.247216031","return_data_bytes":"100","slack_time_secs":"0.147216031"}
-[2023-09-12T12:51:31.826983Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted d31406bc-13ed-4d87-99a5-65b305e7a31c {}
-[2023-09-12T12:51:31.926999Z DEBUG client] Task d31406bc-13ed-4d87-99a5-65b305e7a31c exec time was 708.734µs shorter than expected, adding diff to receive time
-[2023-09-12T12:51:31.927014Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline d31406bc-13ed-4d87-99a5-65b305e7a31c {"time_to_deadline_secs":"0.085672373","deadline":"1694523092.0133781","exec_time_secs":"0.099291266","initial_slack_time_secs":"0.14722807192671095","return_data_bytes":"100"}
-[2023-09-12T12:51:31.927028Z DEBUG client] Sleeping for 206.580924ms...
-[2023-09-12T12:51:32.135380Z DEBUG client] Slack time ms: 137.46075537233173
-[2023-09-12T12:51:32.135395Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 25f8677b-3692-43c3-88f3-bc686d923702 {"deadline":"1694523092.372852","time_to_deadline_secs":"0.237459047","exec_time_secs":"0.1","return_data_bytes":"100","slack_time_secs":"0.137459047"}
-[2023-09-12T12:51:32.135410Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 25f8677b-3692-43c3-88f3-bc686d923702 {"return_data_bytes":"100","deadline":"1694523092.372852","exec_time_secs":"0.1","slack_time_secs":"0.137443464","time_to_deadline_secs":"0.237443464"}
-[2023-09-12T12:51:32.196755Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted 25f8677b-3692-43c3-88f3-bc686d923702 {}
-[2023-09-12T12:51:32.297684Z DEBUG client] Task 25f8677b-3692-43c3-88f3-bc686d923702 exec time was 492.49µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:32.297698Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline 25f8677b-3692-43c3-88f3-bc686d923702 {"initial_slack_time_secs":"0.13746075537233174","deadline":"1694523092.372852","time_to_deadline_secs":"0.075660979","exec_time_secs":"0.10049249","return_data_bytes":"100"}
-[2023-09-12T12:51:32.297708Z DEBUG client] Sleeping for 1.345177569s...
-[2023-09-12T12:51:33.648041Z DEBUG client] Slack time ms: 140.21120039283085
-[2023-09-12T12:51:33.648055Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated c4854206-adeb-402c-bf40-b7efd243a53d {"slack_time_secs":"0.140210367","return_data_bytes":"100","exec_time_secs":"0.1","deadline":"1694523093.8882637","time_to_deadline_secs":"0.240210367"}
-[2023-09-12T12:51:33.648068Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted c4854206-adeb-402c-bf40-b7efd243a53d {"time_to_deadline_secs":"0.240197117","slack_time_secs":"0.140197117","exec_time_secs":"0.1","return_data_bytes":"100","deadline":"1694523093.8882637"}
-[2023-09-12T12:51:33.708764Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted c4854206-adeb-402c-bf40-b7efd243a53d {}
-[2023-09-12T12:51:33.809178Z DEBUG client] Task c4854206-adeb-402c-bf40-b7efd243a53d exec time was 412.866µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:33.809192Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline c4854206-adeb-402c-bf40-b7efd243a53d {"exec_time_secs":"0.100412866","deadline":"1694523093.8882637","initial_slack_time_secs":"0.14021120039283086","time_to_deadline_secs":"0.07949944","return_data_bytes":"100"}
-[2023-09-12T12:51:33.809202Z DEBUG client] Sleeping for 806.065214ms...
-[2023-09-12T12:51:34.617737Z DEBUG client] Slack time ms: 146.51708257191171
-[2023-09-12T12:51:34.617757Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 98fbe8e4-6bb0-4d78-a19e-46e20c7961fb {"deadline":"1694523094.8642707","exec_time_secs":"0.1","return_data_bytes":"100","time_to_deadline_secs":"0.246516125","slack_time_secs":"0.146516125"}
-[2023-09-12T12:51:34.617768Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 98fbe8e4-6bb0-4d78-a19e-46e20c7961fb {"return_data_bytes":"100","deadline":"1694523094.8642707","exec_time_secs":"0.1","time_to_deadline_secs":"0.246503708","slack_time_secs":"0.146503708"}
-[2023-09-12T12:51:34.678875Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted 98fbe8e4-6bb0-4d78-a19e-46e20c7961fb {}
-[2023-09-12T12:51:34.779115Z DEBUG client] Task 98fbe8e4-6bb0-4d78-a19e-46e20c7961fb exec time was 469.033µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:34.779130Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline 98fbe8e4-6bb0-4d78-a19e-46e20c7961fb {"time_to_deadline_secs":"0.085626994","deadline":"1694523094.8642707","exec_time_secs":"0.100469033","return_data_bytes":"100","initial_slack_time_secs":"0.1465170825719117"}
-[2023-09-12T12:51:34.779141Z DEBUG client] Sleeping for 1.303458629s...
-[2023-09-12T12:51:36.084217Z DEBUG client] Slack time ms: 132.25253894673455
-[2023-09-12T12:51:36.084235Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 352758be-d4f6-4659-a0e9-458bfcffc234 {"slack_time_secs":"0.132251497","return_data_bytes":"100","time_to_deadline_secs":"0.232251497","exec_time_secs":"0.1","deadline":"1694523096.316484"}
-[2023-09-12T12:51:36.084247Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 352758be-d4f6-4659-a0e9-458bfcffc234 {"slack_time_secs":"0.132237831","deadline":"1694523096.316484","time_to_deadline_secs":"0.232237831","exec_time_secs":"0.1","return_data_bytes":"100"}
-[2023-09-12T12:51:36.144538Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted 352758be-d4f6-4659-a0e9-458bfcffc234 {}
-[2023-09-12T12:51:36.245838Z DEBUG client] Task 352758be-d4f6-4659-a0e9-458bfcffc234 exec time was 346.369µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:36.245855Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline 352758be-d4f6-4659-a0e9-458bfcffc234 {"initial_slack_time_secs":"0.13225253894673455","exec_time_secs":"0.100346369","return_data_bytes":"100","deadline":"1694523096.316484","time_to_deadline_secs":"0.070993291"}
-[2023-09-12T12:51:36.245867Z DEBUG client] Sleeping for 236.83588ms...
-[2023-09-12T12:51:36.486040Z DEBUG client] Slack time ms: 122.60906695113263
-[2023-09-12T12:51:36.486071Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated abab56e9-8be3-4fd3-88b4-d71e82fd9ab7 {"slack_time_secs":"0.122607442","exec_time_secs":"0.1","time_to_deadline_secs":"0.222607442","return_data_bytes":"100","deadline":"1694523096.7086735"}
-[2023-09-12T12:51:36.486093Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted abab56e9-8be3-4fd3-88b4-d71e82fd9ab7 {"deadline":"1694523096.7086735","return_data_bytes":"100","exec_time_secs":"0.1","slack_time_secs":"0.12258311","time_to_deadline_secs":"0.22258311"}
-[2023-09-12T12:51:36.547661Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted abab56e9-8be3-4fd3-88b4-d71e82fd9ab7 {}
-[2023-09-12T12:51:36.649812Z DEBUG client] Task abab56e9-8be3-4fd3-88b4-d71e82fd9ab7 exec time was 1.029146ms longer than expected, subtract diff from receive time
-[2023-09-12T12:51:36.649828Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline abab56e9-8be3-4fd3-88b4-d71e82fd9ab7 {"deadline":"1694523096.7086735","exec_time_secs":"0.101029146","time_to_deadline_secs":"0.059900894","return_data_bytes":"100","initial_slack_time_secs":"0.12260906695113263"}
-[2023-09-12T12:51:36.649842Z DEBUG client] Sleeping for 167.747514ms...
-[2023-09-12T12:51:36.818888Z DEBUG client] Slack time ms: 58.793275469355216
-[2023-09-12T12:51:36.818901Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 7ed64f70-376a-4ade-ba99-820ac3c94b7e {"exec_time_secs":"0.1","time_to_deadline_secs":"0.158792483","deadline":"1694523096.9776912","slack_time_secs":"0.058792483","return_data_bytes":"100"}
-[2023-09-12T12:51:36.818913Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 7ed64f70-376a-4ade-ba99-820ac3c94b7e {"exec_time_secs":"0.1","time_to_deadline_secs":"0.15877915","deadline":"1694523096.9776912","slack_time_secs":"0.05877915","return_data_bytes":"100"}
-[2023-09-12T12:51:36.881765Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskRejected 7ed64f70-376a-4ade-ba99-820ac3c94b7e {"error_message":"Task arrived with insufficient time for execution"}
-[2023-09-12T12:51:36.881773Z DEBUG client] Sleeping 95.917646ms until deadline of rejected task
-[2023-09-12T12:51:36.980182Z DEBUG client] Sleeping for 1.118550202s...
-[2023-09-12T12:51:38.099493Z DEBUG client] Slack time ms: 84.10415184856501
-[2023-09-12T12:51:38.099507Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 331d1c6e-c322-445e-864e-f7f1838a3dbc {"slack_time_secs":"0.08410336","time_to_deadline_secs":"0.18410336","return_data_bytes":"100","deadline":"1694523098.2836084","exec_time_secs":"0.1"}
-[2023-09-12T12:51:38.099518Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 331d1c6e-c322-445e-864e-f7f1838a3dbc {"deadline":"1694523098.2836084","return_data_bytes":"100","exec_time_secs":"0.1","time_to_deadline_secs":"0.184091069","slack_time_secs":"0.084091069"}
-[2023-09-12T12:51:38.159869Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskAccepted 331d1c6e-c322-445e-864e-f7f1838a3dbc {}
-[2023-09-12T12:51:38.261145Z DEBUG client] Task 331d1c6e-c322-445e-864e-f7f1838a3dbc exec time was 474.908µs longer than expected, subtract diff from receive time
-[2023-09-12T12:51:38.261160Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskResultReceivedWithinDeadline 331d1c6e-c322-445e-864e-f7f1838a3dbc {"initial_slack_time_secs":"0.08410415184856501","exec_time_secs":"0.100474908","deadline":"1694523098.2836084","time_to_deadline_secs":"0.02293911","return_data_bytes":"100"}
-[2023-09-12T12:51:38.261171Z DEBUG client] Sleeping for 2.517578004s...
-[2023-09-12T12:51:40.779855Z DEBUG client] Slack time ms: 64.0795138196847
-[2023-09-12T12:51:40.779881Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 882be28e-4562-40de-8800-5af789916660 {"deadline":"1694523100.9439561","slack_time_secs":"0.064078597","time_to_deadline_secs":"0.164078597","exec_time_secs":"0.1","return_data_bytes":"100"}
-[2023-09-12T12:51:40.779894Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 882be28e-4562-40de-8800-5af789916660 {"return_data_bytes":"100","exec_time_secs":"0.1","deadline":"1694523100.9439561","slack_time_secs":"0.064063681","time_to_deadline_secs":"0.164063681"}
-[2023-09-12T12:51:40.840652Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskRejected 882be28e-4562-40de-8800-5af789916660 {"error_message":"Task arrived with insufficient time for execution"}
-[2023-09-12T12:51:40.840721Z DEBUG client] Sleeping 103.235339ms until deadline of rejected task
-[2023-09-12T12:51:40.944882Z DEBUG client] Sleeping for 1.487123962s...
-[2023-09-12T12:51:42.433915Z DEBUG client] Slack time ms: 82.8542393414625
-[2023-09-12T12:51:42.433966Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskCreated 72c83054-7741-428d-88a7-01a502eabfe0 {"return_data_bytes":"100","deadline":"1694523102.6168149","time_to_deadline_secs":"0.182853281","exec_time_secs":"0.1","slack_time_secs":"0.082853281"}
-[2023-09-12T12:51:42.433983Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskSubmitted 72c83054-7741-428d-88a7-01a502eabfe0 {"deadline":"1694523102.6168149","exec_time_secs":"0.1","slack_time_secs":"0.082832781","return_data_bytes":"100","time_to_deadline_secs":"0.182832781"}
-[2023-09-12T12:51:42.496566Z TRACE utils] METRIC 029acacb-d39a-401e-9e8c-2ada329d8539 ClientTaskRejected 72c83054-7741-428d-88a7-01a502eabfe0 {"error_message":"Task arrived with insufficient time for execution"}
-[2023-09-12T12:51:42.496575Z DEBUG client] Sleeping 120.239937ms until deadline of rejected task
-[2023-09-12T12:51:42.617853Z DEBUG client] Sleeping for 1.430865124s...
-[2023-09-12T12:51:42.721602Z INFO  launcher] Stopping
+[2023-09-13T09:16:32.197443Z DEBUG client] Connecting to scheduler at 10.0.0.1:1337...
+[2023-09-13T09:16:32.380772Z DEBUG client] Connected to scheduler at 10.0.0.1:1337
+[2023-09-13T09:16:32.380782Z DEBUG client] Slack time mean: 100 variance: 33.333333333333336
+[2023-09-13T09:16:32.380787Z DEBUG client] Slack time ms: 133.55143272854573
+[2023-09-13T09:16:32.380791Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated edfa9734-c4ac-4ebf-938c-3b7f53805cb2 {"return_data_bytes":"100","slack_time_secs":"0.133550975","deadline":"1694596592.5643399","time_to_deadline_secs":"0.183550975","exec_time_secs":"0.05"}
+[2023-09-13T09:16:32.380800Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted edfa9734-c4ac-4ebf-938c-3b7f53805cb2 {"slack_time_secs":"0.13354085","deadline":"1694596592.5643399","time_to_deadline_secs":"0.18354085","exec_time_secs":"0.05","return_data_bytes":"100"}
+[2023-09-13T09:16:32.442166Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskAccepted edfa9734-c4ac-4ebf-938c-3b7f53805cb2 {}
+[2023-09-13T09:16:32.565684Z DEBUG client] Task edfa9734-c4ac-4ebf-938c-3b7f53805cb2 exec time was 561.051µs longer than expected, subtract diff from receive time
+[2023-09-13T09:16:32.565721Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskResultReceivedAfterDeadline edfa9734-c4ac-4ebf-938c-3b7f53805cb2 {"return_data_bytes":"100","exec_time_secs":"0.050561051","deadline":"1694596592.5643399","initial_slack_time_secs":"0.13355143272854572","time_to_deadline_secs":"-0.000781507"}
+[2023-09-13T09:16:32.565771Z DEBUG client] Sleeping for 897.413505ms...
+[2023-09-13T09:16:33.464062Z DEBUG client] Slack time ms: 100.0927524639219
+[2023-09-13T09:16:33.464099Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated 87c51923-54dd-4371-9c01-d002f2e60872 {"exec_time_secs":"0.05","slack_time_secs":"0.100091627","time_to_deadline_secs":"0.150091627","deadline":"1694596593.6141865","return_data_bytes":"100"}
+[2023-09-13T09:16:33.464118Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted 87c51923-54dd-4371-9c01-d002f2e60872 {"time_to_deadline_secs":"0.150070335","deadline":"1694596593.6141865","slack_time_secs":"0.100070335","return_data_bytes":"100","exec_time_secs":"0.05"}
+[2023-09-13T09:16:33.528313Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected 87c51923-54dd-4371-9c01-d002f2e60872 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:33.528334Z DEBUG client] Sleeping 85.852927ms until deadline of rejected task
+[2023-09-13T09:16:33.615698Z DEBUG client] Sleeping for 2.977883487s...
+[2023-09-13T09:16:36.594697Z DEBUG client] Slack time ms: 94.9682465094076
+[2023-09-13T09:16:36.594730Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated b0b27b85-4110-4274-a646-22ce273bbe11 {"time_to_deadline_secs":"0.14496683","slack_time_secs":"0.09496683","exec_time_secs":"0.05","return_data_bytes":"100","deadline":"1694596596.7396917"}
+[2023-09-13T09:16:36.594757Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted b0b27b85-4110-4274-a646-22ce273bbe11 {"deadline":"1694596596.7396917","time_to_deadline_secs":"0.144938538","exec_time_secs":"0.05","slack_time_secs":"0.094938538","return_data_bytes":"100"}
+[2023-09-13T09:16:36.655579Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected b0b27b85-4110-4274-a646-22ce273bbe11 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:36.655589Z DEBUG client] Sleeping 84.102591ms until deadline of rejected task
+[2023-09-13T09:16:36.741854Z DEBUG client] Sleeping for 581.616117ms...
+[2023-09-13T09:16:37.325718Z DEBUG client] Slack time ms: 58.87826720447974
+[2023-09-13T09:16:37.325743Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated 09d2bf9d-d0d4-4fbc-aaa0-c32d2adbcc46 {"time_to_deadline_secs":"0.108876892","return_data_bytes":"100","deadline":"1694596597.4346151","slack_time_secs":"0.058876892","exec_time_secs":"0.05"}
+[2023-09-13T09:16:37.325764Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted 09d2bf9d-d0d4-4fbc-aaa0-c32d2adbcc46 {"exec_time_secs":"0.05","deadline":"1694596597.4346151","time_to_deadline_secs":"0.108853475","slack_time_secs":"0.058853475","return_data_bytes":"100"}
+[2023-09-13T09:16:37.389736Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected 09d2bf9d-d0d4-4fbc-aaa0-c32d2adbcc46 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:37.389755Z DEBUG client] Sleeping 44.860351ms until deadline of rejected task
+[2023-09-13T09:16:37.436712Z DEBUG client] Sleeping for 751.115518ms...
+[2023-09-13T09:16:38.190397Z DEBUG client] Slack time ms: 96.01506638765727
+[2023-09-13T09:16:38.190420Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated da30b2ca-ebd7-4750-a912-dbc83bd5d07b {"time_to_deadline_secs":"0.146013941","exec_time_secs":"0.05","return_data_bytes":"100","slack_time_secs":"0.096013941","deadline":"1694596598.3364298"}
+[2023-09-13T09:16:38.190436Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted da30b2ca-ebd7-4750-a912-dbc83bd5d07b {"exec_time_secs":"0.05","return_data_bytes":"100","slack_time_secs":"0.095995982","time_to_deadline_secs":"0.145995982","deadline":"1694596598.3364298"}
+[2023-09-13T09:16:38.251158Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected da30b2ca-ebd7-4750-a912-dbc83bd5d07b {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:38.251177Z DEBUG client] Sleeping 85.252323ms until deadline of rejected task
+[2023-09-13T09:16:38.342064Z DEBUG client] Sleeping for 468.419153ms...
+[2023-09-13T09:16:38.811788Z DEBUG client] Slack time ms: 101.74032535201594
+[2023-09-13T09:16:38.811835Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated 703ceeee-dca9-43bf-9fe1-675ac79f5083 {"slack_time_secs":"0.101737075","exec_time_secs":"0.05","return_data_bytes":"100","deadline":"1694596598.9635615","time_to_deadline_secs":"0.151737075"}
+[2023-09-13T09:16:38.811892Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted 703ceeee-dca9-43bf-9fe1-675ac79f5083 {"slack_time_secs":"0.101673907","exec_time_secs":"0.05","return_data_bytes":"100","time_to_deadline_secs":"0.151673907","deadline":"1694596598.9635615"}
+[2023-09-13T09:16:38.877790Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected 703ceeee-dca9-43bf-9fe1-675ac79f5083 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:38.877836Z DEBUG client] Sleeping 85.726ms until deadline of rejected task
+[2023-09-13T09:16:38.966533Z DEBUG client] Sleeping for 1.632008545s...
+[2023-09-13T09:16:40.599741Z DEBUG client] Slack time ms: 128.6120979538539
+[2023-09-13T09:16:40.599760Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated 01c09dd4-c2bd-4e15-b8f5-c2c78856ae9a {"slack_time_secs":"0.128610931","return_data_bytes":"100","exec_time_secs":"0.05","deadline":"1694596600.7783675","time_to_deadline_secs":"0.178610931"}
+[2023-09-13T09:16:40.599772Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted 01c09dd4-c2bd-4e15-b8f5-c2c78856ae9a {"return_data_bytes":"100","exec_time_secs":"0.05","time_to_deadline_secs":"0.178596514","deadline":"1694596600.7783675","slack_time_secs":"0.128596514"}
+[2023-09-13T09:16:40.660817Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected 01c09dd4-c2bd-4e15-b8f5-c2c78856ae9a {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:40.660828Z DEBUG client] Sleeping 117.539803ms until deadline of rejected task
+[2023-09-13T09:16:40.779732Z DEBUG client] Sleeping for 1.780344708s...
+[2023-09-13T09:16:42.562159Z DEBUG client] Slack time ms: 22.13830479801689
+[2023-09-13T09:16:42.562171Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated 509332d4-b9b2-46c8-8465-2efa7d2d8101 {"time_to_deadline_secs":"0.072137513","exec_time_secs":"0.05","deadline":"1694596602.6343067","slack_time_secs":"0.022137513","return_data_bytes":"100"}
+[2023-09-13T09:16:42.562181Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted 509332d4-b9b2-46c8-8465-2efa7d2d8101 {"slack_time_secs":"0.022126555","return_data_bytes":"100","exec_time_secs":"0.05","deadline":"1694596602.6343067","time_to_deadline_secs":"0.072126555"}
+[2023-09-13T09:16:42.622790Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected 509332d4-b9b2-46c8-8465-2efa7d2d8101 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:42.622800Z DEBUG client] Sleeping 11.507095ms until deadline of rejected task
+[2023-09-13T09:16:42.635519Z DEBUG client] Sleeping for 89.625215ms...
+[2023-09-13T09:16:42.728092Z DEBUG client] Slack time ms: 44.94809616501745
+[2023-09-13T09:16:42.728107Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated 46811f60-9d63-499e-a5c0-253157cda514 {"exec_time_secs":"0.05","deadline":"1694596602.8230515","slack_time_secs":"0.044946887","time_to_deadline_secs":"0.094946887","return_data_bytes":"100"}
+[2023-09-13T09:16:42.728118Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted 46811f60-9d63-499e-a5c0-253157cda514 {"slack_time_secs":"0.044934221","exec_time_secs":"0.05","time_to_deadline_secs":"0.094934221","return_data_bytes":"100","deadline":"1694596602.8230515"}
+[2023-09-13T09:16:42.790913Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected 46811f60-9d63-499e-a5c0-253157cda514 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:42.790925Z DEBUG client] Sleeping 32.12606ms until deadline of rejected task
+[2023-09-13T09:16:42.823936Z DEBUG client] Sleeping for 1.194472768s...
+[2023-09-13T09:16:44.019179Z DEBUG client] Slack time ms: 92.90702428016453
+[2023-09-13T09:16:44.019208Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated 0a3770f7-34da-40c8-8bf3-0cb4233919f3 {"slack_time_secs":"0.092905357","deadline":"1694596604.1621087","return_data_bytes":"100","time_to_deadline_secs":"0.142905357","exec_time_secs":"0.05"}
+[2023-09-13T09:16:44.019231Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted 0a3770f7-34da-40c8-8bf3-0cb4233919f3 {"exec_time_secs":"0.05","time_to_deadline_secs":"0.142880024","deadline":"1694596604.1621087","return_data_bytes":"100","slack_time_secs":"0.092880024"}
+[2023-09-13T09:16:44.081187Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected 0a3770f7-34da-40c8-8bf3-0cb4233919f3 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:44.081203Z DEBUG client] Sleeping 80.905829ms until deadline of rejected task
+[2023-09-13T09:16:44.163908Z DEBUG client] Sleeping for 481.95819ms...
+[2023-09-13T09:16:44.647271Z DEBUG client] Slack time ms: 59.7145561926861
+[2023-09-13T09:16:44.647336Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated b9601efb-a20c-40b0-92a9-d1cd213d9ab9 {"slack_time_secs":"0.059711556","return_data_bytes":"100","time_to_deadline_secs":"0.109711556","exec_time_secs":"0.05","deadline":"1694596604.7570357"}
+[2023-09-13T09:16:44.647430Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted b9601efb-a20c-40b0-92a9-d1cd213d9ab9 {"return_data_bytes":"100","time_to_deadline_secs":"0.109618972","exec_time_secs":"0.05","deadline":"1694596604.7570357","slack_time_secs":"0.059618972"}
+[2023-09-13T09:16:44.708079Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected b9601efb-a20c-40b0-92a9-d1cd213d9ab9 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:44.708108Z DEBUG client] Sleeping 48.927089ms until deadline of rejected task
+[2023-09-13T09:16:44.758892Z DEBUG client] Sleeping for 1.470336596s...
+[2023-09-13T09:16:46.232171Z DEBUG client] Slack time ms: 85.02969748582089
+[2023-09-13T09:16:46.232233Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated cda1fa6e-f24e-48d3-8cb2-8a90dfc82b88 {"exec_time_secs":"0.05","time_to_deadline_secs":"0.135026572","slack_time_secs":"0.085026572","return_data_bytes":"100","deadline":"1694596606.367247"}
+[2023-09-13T09:16:46.232295Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted cda1fa6e-f24e-48d3-8cb2-8a90dfc82b88 {"return_data_bytes":"100","exec_time_secs":"0.05","deadline":"1694596606.367247","time_to_deadline_secs":"0.134959196","slack_time_secs":"0.084959196"}
+[2023-09-13T09:16:46.294830Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected cda1fa6e-f24e-48d3-8cb2-8a90dfc82b88 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:46.294845Z DEBUG client] Sleeping 72.402404ms until deadline of rejected task
+[2023-09-13T09:16:46.373203Z DEBUG client] Sleeping for 0ns...
+[2023-09-13T09:16:46.373238Z DEBUG client] Slack time ms: 127.50001241858001
+[2023-09-13T09:16:46.373248Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated bf9ba172-640d-4cb5-bb35-f1522e04e1cd {"return_data_bytes":"100","exec_time_secs":"0.05","deadline":"1694596606.5507414","slack_time_secs":"0.127498012","time_to_deadline_secs":"0.177498012"}
+[2023-09-13T09:16:46.373272Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted bf9ba172-640d-4cb5-bb35-f1522e04e1cd {"slack_time_secs":"0.127473303","deadline":"1694596606.5507414","time_to_deadline_secs":"0.177473303","exec_time_secs":"0.05","return_data_bytes":"100"}
+[2023-09-13T09:16:46.439048Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected bf9ba172-640d-4cb5-bb35-f1522e04e1cd {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:46.439098Z DEBUG client] Sleeping 111.643333ms until deadline of rejected task
+[2023-09-13T09:16:46.553964Z DEBUG client] Sleeping for 53.089252ms...
+[2023-09-13T09:16:46.610806Z DEBUG client] Slack time ms: 30.96940052387569
+[2023-09-13T09:16:46.610837Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated 11424328-b365-457d-ac97-003fd1b2b1ac {"time_to_deadline_secs":"0.080967567","return_data_bytes":"100","slack_time_secs":"0.030967567","deadline":"1694596606.6917982","exec_time_secs":"0.05"}
+[2023-09-13T09:16:46.610861Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted 11424328-b365-457d-ac97-003fd1b2b1ac {"return_data_bytes":"100","exec_time_secs":"0.05","time_to_deadline_secs":"0.08094065","deadline":"1694596606.6917982","slack_time_secs":"0.03094065"}
+[2023-09-13T09:16:46.673825Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected 11424328-b365-457d-ac97-003fd1b2b1ac {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:46.673878Z DEBUG client] Sleeping 17.920392ms until deadline of rejected task
+[2023-09-13T09:16:46.698117Z DEBUG client] Sleeping for 318.692188ms...
+[2023-09-13T09:16:47.019152Z DEBUG client] Slack time ms: 67.34066205978029
+[2023-09-13T09:16:47.019215Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated 032300b2-8327-4fa1-9012-8d030be94a75 {"slack_time_secs":"0.067336871","exec_time_secs":"0.05","return_data_bytes":"100","time_to_deadline_secs":"0.117336871","deadline":"1694596607.1365402"}
+[2023-09-13T09:16:47.019280Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted 032300b2-8327-4fa1-9012-8d030be94a75 {"return_data_bytes":"100","time_to_deadline_secs":"0.117267161","slack_time_secs":"0.067267161","exec_time_secs":"0.05","deadline":"1694596607.1365402"}
+[2023-09-13T09:16:47.085169Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected 032300b2-8327-4fa1-9012-8d030be94a75 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:47.085222Z DEBUG client] Sleeping 51.317854ms until deadline of rejected task
+[2023-09-13T09:16:47.138373Z DEBUG client] Sleeping for 648.996816ms...
+[2023-09-13T09:16:47.792833Z DEBUG client] Slack time ms: 137.643835188965
+[2023-09-13T09:16:47.792911Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated 3a1115ce-1dcf-4f94-9a1d-d0a717c99787 {"time_to_deadline_secs":"0.187639418","return_data_bytes":"100","deadline":"1694596607.9805331","slack_time_secs":"0.137639418","exec_time_secs":"0.05"}
+[2023-09-13T09:16:47.792981Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted 3a1115ce-1dcf-4f94-9a1d-d0a717c99787 {"time_to_deadline_secs":"0.187560625","exec_time_secs":"0.05","slack_time_secs":"0.137560625","deadline":"1694596607.9805331","return_data_bytes":"100"}
+[2023-09-13T09:16:47.858856Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected 3a1115ce-1dcf-4f94-9a1d-d0a717c99787 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:47.858906Z DEBUG client] Sleeping 121.629526ms until deadline of rejected task
+[2023-09-13T09:16:47.985580Z DEBUG client] Sleeping for 882.316819ms...
+[2023-09-13T09:16:48.873803Z DEBUG client] Slack time ms: 119.49811024199128
+[2023-09-13T09:16:48.873874Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated b5aa4377-fa89-424b-80c6-2359b6b94ae0 {"slack_time_secs":"0.119493943","deadline":"1694596609.043354","exec_time_secs":"0.05","time_to_deadline_secs":"0.169493943","return_data_bytes":"100"}
+[2023-09-13T09:16:48.874108Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted b5aa4377-fa89-424b-80c6-2359b6b94ae0 {"exec_time_secs":"0.05","deadline":"1694596609.043354","time_to_deadline_secs":"0.169413566","slack_time_secs":"0.119413566","return_data_bytes":"100"}
+[2023-09-13T09:16:48.944033Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected b5aa4377-fa89-424b-80c6-2359b6b94ae0 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:48.944095Z DEBUG client] Sleeping 99.259189ms until deadline of rejected task
+[2023-09-13T09:16:49.044264Z DEBUG client] Sleeping for 405.051731ms...
+[2023-09-13T09:16:49.455214Z DEBUG client] Slack time ms: 108.71682518094117
+[2023-09-13T09:16:49.455307Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated fec591c6-0dda-4fc3-93cf-e780a61fd589 {"slack_time_secs":"0.108712784","deadline":"1694596609.614007","return_data_bytes":"100","exec_time_secs":"0.05","time_to_deadline_secs":"0.158712784"}
+[2023-09-13T09:16:49.455372Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted fec591c6-0dda-4fc3-93cf-e780a61fd589 {"exec_time_secs":"0.05","deadline":"1694596609.614007","time_to_deadline_secs":"0.158641824","slack_time_secs":"0.108641824","return_data_bytes":"100"}
+[2023-09-13T09:16:49.518719Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected fec591c6-0dda-4fc3-93cf-e780a61fd589 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:49.518757Z DEBUG client] Sleeping 95.250677ms until deadline of rejected task
+[2023-09-13T09:16:49.616906Z DEBUG client] Sleeping for 2.719601611s...
+[2023-09-13T09:16:52.339599Z DEBUG client] Slack time ms: 126.87459339489067
+[2023-09-13T09:16:52.339668Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated fbbe4039-e211-4e16-bfa3-d16d1f690e65 {"time_to_deadline_secs":"0.176871635","return_data_bytes":"100","deadline":"1694596612.516529","slack_time_secs":"0.126871635","exec_time_secs":"0.05"}
+[2023-09-13T09:16:52.339727Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted fbbe4039-e211-4e16-bfa3-d16d1f690e65 {"deadline":"1694596612.516529","time_to_deadline_secs":"0.176808842","return_data_bytes":"100","slack_time_secs":"0.126808842","exec_time_secs":"0.05"}
+[2023-09-13T09:16:52.402031Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected fbbe4039-e211-4e16-bfa3-d16d1f690e65 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:52.402085Z DEBUG client] Sleeping 114.444537ms until deadline of rejected task
+[2023-09-13T09:16:52.522783Z DEBUG client] Sleeping for 3.391674457s...
+[2023-09-13T09:16:55.917185Z DEBUG client] Slack time ms: 149.14753462132813
+[2023-09-13T09:16:55.917237Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated 72bc9177-81c0-413e-b4d1-6a0356b49f96 {"time_to_deadline_secs":"0.19914391","deadline":"1694596616.1163719","return_data_bytes":"100","exec_time_secs":"0.05","slack_time_secs":"0.14914391"}
+[2023-09-13T09:16:55.917313Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted 72bc9177-81c0-413e-b4d1-6a0356b49f96 {"return_data_bytes":"100","exec_time_secs":"0.05","deadline":"1694596616.1163719","time_to_deadline_secs":"0.199062909","slack_time_secs":"0.149062909"}
+[2023-09-13T09:16:55.979334Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskAccepted 72bc9177-81c0-413e-b4d1-6a0356b49f96 {}
+[2023-09-13T09:16:56.045227Z DEBUG client] Task 72bc9177-81c0-413e-b4d1-6a0356b49f96 exec time was 1.41755ms longer than expected, subtract diff from receive time
+[2023-09-13T09:16:56.045239Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskResultReceivedWithinDeadline 72bc9177-81c0-413e-b4d1-6a0356b49f96 {"time_to_deadline_secs":"0.072571072","deadline":"1694596616.1163719","exec_time_secs":"0.05141755","initial_slack_time_secs":"0.14914753462132813","return_data_bytes":"100"}
+[2023-09-13T09:16:56.045252Z DEBUG client] Sleeping for 1.004649826s...
+[2023-09-13T09:16:57.053036Z DEBUG client] Slack time ms: 140.05032946590316
+[2023-09-13T09:16:57.053097Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated 405cb647-f436-411d-a3c9-e67cfbd54033 {"exec_time_secs":"0.05","slack_time_secs":"0.140047037","time_to_deadline_secs":"0.190047037","return_data_bytes":"100","deadline":"1694596617.243132"}
+[2023-09-13T09:16:57.053164Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted 405cb647-f436-411d-a3c9-e67cfbd54033 {"slack_time_secs":"0.139976077","exec_time_secs":"0.05","time_to_deadline_secs":"0.189976077","deadline":"1694596617.243132","return_data_bytes":"100"}
+[2023-09-13T09:16:57.114301Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskAccepted 405cb647-f436-411d-a3c9-e67cfbd54033 {}
+[2023-09-13T09:16:57.242400Z DEBUG client] Task 405cb647-f436-411d-a3c9-e67cfbd54033 exec time was 567.562µs shorter than expected, adding diff to receive time
+[2023-09-13T09:16:57.242421Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskResultReceivedWithinDeadline 405cb647-f436-411d-a3c9-e67cfbd54033 {"initial_slack_time_secs":"0.14005032946590315","return_data_bytes":"100","deadline":"1694596617.243132","exec_time_secs":"0.049432438","time_to_deadline_secs":"0.000166569"}
+[2023-09-13T09:16:57.242440Z DEBUG client] Sleeping for 679.984352ms...
+[2023-09-13T09:16:57.925716Z DEBUG client] Slack time ms: 80.65032757004957
+[2023-09-13T09:16:57.925788Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated d215bd87-c0c1-42b5-9d4a-8b32ef6efd76 {"exec_time_secs":"0.05","return_data_bytes":"100","slack_time_secs":"0.080646203","deadline":"1694596618.0564218","time_to_deadline_secs":"0.130646203"}
+[2023-09-13T09:16:57.925866Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted d215bd87-c0c1-42b5-9d4a-8b32ef6efd76 {"deadline":"1694596618.0564218","time_to_deadline_secs":"0.130562744","return_data_bytes":"100","slack_time_secs":"0.080562744","exec_time_secs":"0.05"}
+[2023-09-13T09:16:57.989705Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected d215bd87-c0c1-42b5-9d4a-8b32ef6efd76 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:57.989737Z DEBUG client] Sleeping 66.684776ms until deadline of rejected task
+[2023-09-13T09:16:58.057480Z DEBUG client] Sleeping for 156.665356ms...
+[2023-09-13T09:16:58.214831Z DEBUG client] Slack time ms: 119.9685029753117
+[2023-09-13T09:16:58.214847Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated 83c52154-3e47-4f70-b14b-08662201f192 {"deadline":"1694596618.3848114","time_to_deadline_secs":"0.169967628","exec_time_secs":"0.05","slack_time_secs":"0.119967628","return_data_bytes":"100"}
+[2023-09-13T09:16:58.214861Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted 83c52154-3e47-4f70-b14b-08662201f192 {"time_to_deadline_secs":"0.169951669","deadline":"1694596618.3848114","slack_time_secs":"0.119951669","return_data_bytes":"100","exec_time_secs":"0.05"}
+[2023-09-13T09:16:58.278728Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected 83c52154-3e47-4f70-b14b-08662201f192 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:58.278739Z DEBUG client] Sleeping 106.072366ms until deadline of rejected task
+[2023-09-13T09:16:58.388488Z DEBUG client] Sleeping for 374.063463ms...
+[2023-09-13T09:16:58.763948Z DEBUG client] Slack time ms: 103.19076339317444
+[2023-09-13T09:16:58.763977Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated ba9274fb-ff10-461a-b558-0d070043bedf {"deadline":"1694596618.9171584","time_to_deadline_secs":"0.153186805","exec_time_secs":"0.05","slack_time_secs":"0.103186805","return_data_bytes":"100"}
+[2023-09-13T09:16:58.764001Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted ba9274fb-ff10-461a-b558-0d070043bedf {"exec_time_secs":"0.05","slack_time_secs":"0.103160554","return_data_bytes":"100","time_to_deadline_secs":"0.153160554","deadline":"1694596618.9171584"}
+[2023-09-13T09:16:58.826243Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected ba9274fb-ff10-461a-b558-0d070043bedf {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:58.826256Z DEBUG client] Sleeping 90.902111ms until deadline of rejected task
+[2023-09-13T09:16:58.921410Z DEBUG client] Sleeping for 693.853901ms...
+[2023-09-13T09:16:59.616775Z DEBUG client] Slack time ms: 91.06875756857441
+[2023-09-13T09:16:59.616794Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated b54e6d8d-f424-4c43-aa04-5ccadf32af34 {"time_to_deadline_secs":"0.141067716","return_data_bytes":"100","slack_time_secs":"0.091067716","exec_time_secs":"0.05","deadline":"1694596619.757859"}
+[2023-09-13T09:16:59.616811Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted b54e6d8d-f424-4c43-aa04-5ccadf32af34 {"return_data_bytes":"100","deadline":"1694596619.757859","time_to_deadline_secs":"0.141049508","slack_time_secs":"0.091049508","exec_time_secs":"0.05"}
+[2023-09-13T09:16:59.678539Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected b54e6d8d-f424-4c43-aa04-5ccadf32af34 {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:16:59.678555Z DEBUG client] Sleeping 79.303445ms until deadline of rejected task
+[2023-09-13T09:16:59.759519Z DEBUG client] Sleeping for 944.081794ms...
+[2023-09-13T09:17:00.704777Z DEBUG client] Slack time ms: 83.39393686894918
+[2023-09-13T09:17:00.704799Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated 8f36b8c1-91d8-4c12-ae27-51fadb30baef {"deadline":"1694596620.838188","exec_time_secs":"0.05","time_to_deadline_secs":"0.133392812","slack_time_secs":"0.083392812","return_data_bytes":"100"}
+[2023-09-13T09:17:00.704815Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted 8f36b8c1-91d8-4c12-ae27-51fadb30baef {"return_data_bytes":"100","deadline":"1694596620.838188","exec_time_secs":"0.05","slack_time_secs":"0.083374395","time_to_deadline_secs":"0.133374395"}
+[2023-09-13T09:17:00.765070Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected 8f36b8c1-91d8-4c12-ae27-51fadb30baef {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:17:00.765083Z DEBUG client] Sleeping 73.105271ms until deadline of rejected task
+[2023-09-13T09:17:00.843451Z DEBUG client] Sleeping for 923.299019ms...
+[2023-09-13T09:17:01.769004Z DEBUG client] Slack time ms: 94.48252904800677
+[2023-09-13T09:17:01.769023Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskCreated 7e4139bd-2f49-403f-8901-e1b32b483afd {"return_data_bytes":"100","deadline":"1694596621.9135017","time_to_deadline_secs":"0.144481696","exec_time_secs":"0.05","slack_time_secs":"0.094481696"}
+[2023-09-13T09:17:01.769040Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskSubmitted 7e4139bd-2f49-403f-8901-e1b32b483afd {"slack_time_secs":"0.094463321","deadline":"1694596621.9135017","exec_time_secs":"0.05","return_data_bytes":"100","time_to_deadline_secs":"0.144463321"}
+[2023-09-13T09:17:01.835153Z TRACE utils] METRIC 4c19c740-8fbd-40d4-ac53-1b7081d3b754 ClientTaskRejected 7e4139bd-2f49-403f-8901-e1b32b483afd {"error_message":"Task arrived with insufficient time for execution"}
+[2023-09-13T09:17:01.835171Z DEBUG client] Sleeping 78.331639ms until deadline of rejected task
+[2023-09-13T09:17:01.917223Z DEBUG client] Sleeping for 1.075654922s...
+[2023-09-13T09:17:02.815048Z INFO  launcher] Stopping
