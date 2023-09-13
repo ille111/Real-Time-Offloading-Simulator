@@ -26,7 +26,7 @@ def scenario(net, log_dir, code_dir):
     client_jitter = '0ms'
     client_poisson_lambda = float(args.ntasks / n_clients)
     client_payload_bytes = 100
-    client_task_wcet_ms = 50
+    client_task_wcet_ms = 100
     client_task_slack_time_mean_ms = 100
     n_workers = 4
     sched_algo = 'PSWF'
