@@ -24,7 +24,7 @@ def scenario(net, log_dir, code_dir):
     n_clients = 10
     client_delay = '30ms'
     client_jitter = args.var
-    client_poisson_lambda = 2.0
+    client_poisson_lambda = 3.0
     client_payload_bytes = 100
     client_task_wcet_ms = 100
     client_task_slack_time_mean_ms = 100
