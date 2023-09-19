@@ -1,0 +1,399 @@
+[2023-09-19T02:16:35.748116Z INFO  worker] Starting worker 59f20523-7b42-4b05-891e-1c2c9a2532d3
+[2023-09-19T02:16:35.754501Z INFO  worker] Connected to scheduler, waiting for tasks
+[2023-09-19T02:16:36.526661Z DEBUG worker] Task 3b23f6f5-2a2a-43ec-aff4-5190f53b0097 took 476.491µs to arrive at worker
+[2023-09-19T02:16:36.526679Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived 3b23f6f5-2a2a-43ec-aff4-5190f53b0097 {"scheduler_worker_delay_secs":"0.000476491","time_to_deadline_secs":"0.177219788","client_id":"6d7b2a68-1d96-4c80-9695-2df3faf87c37"}
+[2023-09-19T02:16:36.526682Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:36.527347Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted 3b23f6f5-2a2a-43ec-aff4-5190f53b0097 {"exec_time_secs":"0.1","start_overhead_secs":"0.000661156"}
+[2023-09-19T02:16:36.527367Z DEBUG worker] Connecting to client at 10.0.0.13:46255...
+[2023-09-19T02:16:36.615276Z DEBUG worker] Task a5e57136-8eae-4f59-8dd4-4d8e10ab8ed2 took 0ns to arrive at worker
+[2023-09-19T02:16:36.615282Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived a5e57136-8eae-4f59-8dd4-4d8e10ab8ed2 {"time_to_deadline_secs":"0.063601077","scheduler_worker_delay_secs":"0","client_id":"4c271dbf-c3d0-4232-ac04-6471bb2ba7ba"}
+[2023-09-19T02:16:36.616519Z DEBUG worker] Connecting to client at 10.0.0.10:41351...
+[2023-09-19T02:16:36.617248Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskPreempted 3b23f6f5-2a2a-43ec-aff4-5190f53b0097 {"exec_time_secs":"0.089901739","preemption_overhead_secs":"0.001961384","new_task":"a5e57136-8eae-4f59-8dd4-4d8e10ab8ed2"}
+[2023-09-19T02:16:36.617250Z DEBUG worker] Task queue: [
+        RunningTask {
+            pid: 2171265,
+            task: Task {
+                id: 3b23f6f52a2a43ecaff45190f53b0097,
+                rpc_id: 1,
+                client_id: 6d7b2a681d964c8096952df3faf87c37,
+                client_addr: 10.0.0.13:46255,
+                deadline: SystemTime {
+                    tv_sec: 1695089796,
+                    tv_nsec: 703878887,
+                },
+                initial_time_to_deadline: 207.774066ms,
+                connection_setup_time: 125.432809ms,
+                worst_case_exec_time: 100ms,
+                actual_exec_time: 100ms,
+                prev_exec_time: 89.901739ms,
+                start_time: Some(
+                    SystemTime {
+                        tv_sec: 1695089796,
+                        tv_nsec: 527343505,
+                    },
+                ),
+                preempt_time: Some(
+                    SystemTime {
+                        tv_sec: 1695089796,
+                        tv_nsec: 617245244,
+                    },
+                ),
+                resume_time: None,
+                finish_time: None,
+                parameters: {
+                    "return_data_bytes": "100",
+                },
+                slack_time: Some(
+                    77.696279ms,
+                ),
+            },
+            task_status: PREEMPTED,
+            preemptions: 1,
+        },
+    ]
+[2023-09-19T02:16:36.618014Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted a5e57136-8eae-4f59-8dd4-4d8e10ab8ed2 {"start_overhead_secs":"0.000728363","exec_time_secs":"0.1"}
+[2023-09-19T02:16:36.711321Z DEBUG worker] Connected to client at 10.0.0.13:46255
+[2023-09-19T02:16:36.718055Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished a5e57136-8eae-4f59-8dd4-4d8e10ab8ed2 {"preemptions":"0","exec_time_secs":"0.100042027"}
+[2023-09-19T02:16:36.742663Z DEBUG worker] Connected to client at 10.0.0.10:41351
+[2023-09-19T02:16:36.742775Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler a5e57136-8eae-4f59-8dd4-4d8e10ab8ed2 {}
+[2023-09-19T02:16:36.742797Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient a5e57136-8eae-4f59-8dd4-4d8e10ab8ed2 {"time_to_deadline_secs":"0","client_addr":"10.0.0.10:41351","return_data_bytes":"100"}
+[2023-09-19T02:16:36.742817Z DEBUG worker] Resuming preempted task 3b23f6f5-2a2a-43ec-aff4-5190f53b0097 after finishing a5e57136-8eae-4f59-8dd4-4d8e10ab8ed2
+[2023-09-19T02:16:36.742820Z DEBUG worker] Task a5e57136-8eae-4f59-8dd4-4d8e10ab8ed2 took 42.027µs longer than expected adding difference to preempted task
+[2023-09-19T02:16:36.747459Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResumed 3b23f6f5-2a2a-43ec-aff4-5190f53b0097 {"preemptions":"1","exec_time_secs":"0.089943766","resume_overhead_secs":"0.004637213"}
+[2023-09-19T02:16:36.757284Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished 3b23f6f5-2a2a-43ec-aff4-5190f53b0097 {"preemptions":"1","exec_time_secs":"0.099768976"}
+[2023-09-19T02:16:36.757290Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler 3b23f6f5-2a2a-43ec-aff4-5190f53b0097 {}
+[2023-09-19T02:16:36.757300Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient 3b23f6f5-2a2a-43ec-aff4-5190f53b0097 {"time_to_deadline_secs":"0","client_addr":"10.0.0.13:46255","return_data_bytes":"100"}
+[2023-09-19T02:16:36.836728Z DEBUG worker] Task 54360287-2ea5-4846-950f-630ced89417e took 1.643431ms to arrive at worker
+[2023-09-19T02:16:36.836738Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived 54360287-2ea5-4846-950f-630ced89417e {"time_to_deadline_secs":"0.142968118","client_id":"e803635f-97c7-442a-8d26-4fd776954e4e","scheduler_worker_delay_secs":"0.001643431"}
+[2023-09-19T02:16:36.836740Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:36.836904Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted 54360287-2ea5-4846-950f-630ced89417e {"start_overhead_secs":"0.000162455","exec_time_secs":"0.1"}
+[2023-09-19T02:16:36.836909Z DEBUG worker] Connecting to client at 10.0.0.7:42891...
+[2023-09-19T02:16:36.937845Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished 54360287-2ea5-4846-950f-630ced89417e {"exec_time_secs":"0.100941262","preemptions":"0"}
+[2023-09-19T02:16:36.963298Z DEBUG worker] Connected to client at 10.0.0.7:42891
+[2023-09-19T02:16:36.963593Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler 54360287-2ea5-4846-950f-630ced89417e {}
+[2023-09-19T02:16:36.963639Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient 54360287-2ea5-4846-950f-630ced89417e {"return_data_bytes":"100","time_to_deadline_secs":"0.016058292","client_addr":"10.0.0.7:42891"}
+[2023-09-19T02:16:36.965964Z DEBUG worker] Task f28c3676-f62a-4613-807b-704602bf9d38 took 365.661µs to arrive at worker
+[2023-09-19T02:16:36.965995Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived f28c3676-f62a-4613-807b-704602bf9d38 {"client_id":"e3b1d8ea-eacb-4591-9ff2-91e4a4c8bfc8","time_to_deadline_secs":"0.176793572","scheduler_worker_delay_secs":"0.000365661"}
+[2023-09-19T02:16:36.966001Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:36.966972Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted f28c3676-f62a-4613-807b-704602bf9d38 {"start_overhead_secs":"0.000965443","exec_time_secs":"0.1"}
+[2023-09-19T02:16:36.966980Z DEBUG worker] Connecting to client at 10.0.0.6:45117...
+[2023-09-19T02:16:37.070283Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished f28c3676-f62a-4613-807b-704602bf9d38 {"preemptions":"0","exec_time_secs":"0.10331193"}
+[2023-09-19T02:16:37.091121Z DEBUG worker] Connected to client at 10.0.0.6:45117
+[2023-09-19T02:16:37.091174Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler f28c3676-f62a-4613-807b-704602bf9d38 {}
+[2023-09-19T02:16:37.091194Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient f28c3676-f62a-4613-807b-704602bf9d38 {"time_to_deadline_secs":"0.051566468","client_addr":"10.0.0.6:45117","return_data_bytes":"100"}
+[2023-09-19T02:16:37.092044Z DEBUG worker] Task a98b6ced-0376-49c2-b722-e84f8834d164 took 800.57µs to arrive at worker
+[2023-09-19T02:16:37.092054Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived a98b6ced-0376-49c2-b722-e84f8834d164 {"client_id":"88d4bd7a-6dec-41e1-995c-b0e25026b03f","scheduler_worker_delay_secs":"0.00080057","time_to_deadline_secs":"0.157728461"}
+[2023-09-19T02:16:37.092057Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:37.092801Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted a98b6ced-0376-49c2-b722-e84f8834d164 {"exec_time_secs":"0.1","start_overhead_secs":"0.000738737"}
+[2023-09-19T02:16:37.092810Z DEBUG worker] Connecting to client at 10.0.0.12:35437...
+[2023-09-19T02:16:37.193540Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished a98b6ced-0376-49c2-b722-e84f8834d164 {"exec_time_secs":"0.100741099","preemptions":"0"}
+[2023-09-19T02:16:37.218433Z DEBUG worker] Connected to client at 10.0.0.12:35437
+[2023-09-19T02:16:37.218708Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler a98b6ced-0376-49c2-b722-e84f8834d164 {}
+[2023-09-19T02:16:37.218914Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient a98b6ced-0376-49c2-b722-e84f8834d164 {"client_addr":"10.0.0.12:35437","return_data_bytes":"100","time_to_deadline_secs":"0.030862884"}
+[2023-09-19T02:16:37.498505Z DEBUG worker] Task 88272fcc-a850-4669-a04e-4d6cfd16a324 took 1.121231ms to arrive at worker
+[2023-09-19T02:16:37.498532Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived 88272fcc-a850-4669-a04e-4d6cfd16a324 {"scheduler_worker_delay_secs":"0.001121231","time_to_deadline_secs":"0.181626034","client_id":"5bbe4c89-f236-4c7f-8261-5cac38d48bf9"}
+[2023-09-19T02:16:37.498536Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:37.498737Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted 88272fcc-a850-4669-a04e-4d6cfd16a324 {"exec_time_secs":"0.1","start_overhead_secs":"0.00019758"}
+[2023-09-19T02:16:37.498742Z DEBUG worker] Connecting to client at 10.0.0.9:43225...
+[2023-09-19T02:16:37.646540Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished 88272fcc-a850-4669-a04e-4d6cfd16a324 {"exec_time_secs":"0.147804099","preemptions":"0"}
+[2023-09-19T02:16:37.681550Z DEBUG worker] Connected to client at 10.0.0.9:43225
+[2023-09-19T02:16:37.681770Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler 88272fcc-a850-4669-a04e-4d6cfd16a324 {}
+[2023-09-19T02:16:37.681779Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient 88272fcc-a850-4669-a04e-4d6cfd16a324 {"time_to_deadline_secs":"0","client_addr":"10.0.0.9:43225","return_data_bytes":"100"}
+[2023-09-19T02:16:37.761022Z DEBUG worker] Task 92999d07-6d52-4a66-aa3e-60ffb91c1391 took 692.113µs to arrive at worker
+[2023-09-19T02:16:37.761040Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived 92999d07-6d52-4a66-aa3e-60ffb91c1391 {"scheduler_worker_delay_secs":"0.000692113","client_id":"870f7de0-50a9-4569-9852-8968789c36b7","time_to_deadline_secs":"0.183058377"}
+[2023-09-19T02:16:37.761041Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:37.761610Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted 92999d07-6d52-4a66-aa3e-60ffb91c1391 {"exec_time_secs":"0.1","start_overhead_secs":"0.000567199"}
+[2023-09-19T02:16:37.761614Z DEBUG worker] Connecting to client at 10.0.0.15:41229...
+[2023-09-19T02:16:37.761984Z DEBUG worker] Task 52aa43e0-f63e-4437-a40e-394b5348cc3b took 462.45µs to arrive at worker
+[2023-09-19T02:16:37.762003Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived 52aa43e0-f63e-4437-a40e-394b5348cc3b {"client_id":"e803635f-97c7-442a-8d26-4fd776954e4e","scheduler_worker_delay_secs":"0.00046245","time_to_deadline_secs":"0.152665093"}
+[2023-09-19T02:16:37.762697Z DEBUG worker] Connecting to client at 10.0.0.7:42891...
+[2023-09-19T02:16:37.764896Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskPreempted 92999d07-6d52-4a66-aa3e-60ffb91c1391 {"preemption_overhead_secs":"0.002890159","new_task":"52aa43e0-f63e-4437-a40e-394b5348cc3b","exec_time_secs":"0.003284778"}
+[2023-09-19T02:16:37.764898Z DEBUG worker] Task queue: [
+        RunningTask {
+            pid: 2171301,
+            task: Task {
+                id: 92999d076d524a66aa3e60ffb91c1391,
+                rpc_id: 1,
+                client_id: 870f7de050a9456998528968789c36b7,
+                client_addr: 10.0.0.15:41229,
+                deadline: SystemTime {
+                    tv_sec: 1695089797,
+                    tv_nsec: 944079735,
+                },
+                initial_time_to_deadline: 213.831901ms,
+                connection_setup_time: 124.175622ms,
+                worst_case_exec_time: 100ms,
+                actual_exec_time: 100ms,
+                prev_exec_time: 3.284778ms,
+                start_time: Some(
+                    SystemTime {
+                        tv_sec: 1695089797,
+                        tv_nsec: 761609432,
+                    },
+                ),
+                preempt_time: Some(
+                    SystemTime {
+                        tv_sec: 1695089797,
+                        tv_nsec: 764894210,
+                    },
+                ),
+                resume_time: None,
+                finish_time: None,
+                parameters: {
+                    "return_data_bytes": "100",
+                },
+                slack_time: Some(
+                    83.75049ms,
+                ),
+            },
+            task_status: PREEMPTED,
+            preemptions: 1,
+        },
+    ]
+[2023-09-19T02:16:37.765000Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted 52aa43e0-f63e-4437-a40e-394b5348cc3b {"exec_time_secs":"0.1","start_overhead_secs":"0.000082332"}
+[2023-09-19T02:16:37.825965Z DEBUG worker] Connected to client at 10.0.0.7:42891
+[2023-09-19T02:16:37.865577Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished 52aa43e0-f63e-4437-a40e-394b5348cc3b {"preemptions":"0","exec_time_secs":"0.100574768"}
+[2023-09-19T02:16:37.865656Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler 52aa43e0-f63e-4437-a40e-394b5348cc3b {}
+[2023-09-19T02:16:37.865747Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient 52aa43e0-f63e-4437-a40e-394b5348cc3b {"client_addr":"10.0.0.7:42891","time_to_deadline_secs":"0.048905045","return_data_bytes":"100"}
+[2023-09-19T02:16:37.865769Z DEBUG worker] Resuming preempted task 92999d07-6d52-4a66-aa3e-60ffb91c1391 after finishing 52aa43e0-f63e-4437-a40e-394b5348cc3b
+[2023-09-19T02:16:37.865771Z DEBUG worker] Task 52aa43e0-f63e-4437-a40e-394b5348cc3b took 574.768µs longer than expected adding difference to preempted task
+[2023-09-19T02:16:37.867744Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResumed 92999d07-6d52-4a66-aa3e-60ffb91c1391 {"preemptions":"1","exec_time_secs":"0.003859546","resume_overhead_secs":"0.001971425"}
+[2023-09-19T02:16:37.885678Z DEBUG worker] Connected to client at 10.0.0.15:41229
+[2023-09-19T02:16:37.965298Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished 92999d07-6d52-4a66-aa3e-60ffb91c1391 {"exec_time_secs":"0.101413407","preemptions":"1"}
+[2023-09-19T02:16:37.965316Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler 92999d07-6d52-4a66-aa3e-60ffb91c1391 {}
+[2023-09-19T02:16:37.965324Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient 92999d07-6d52-4a66-aa3e-60ffb91c1391 {"time_to_deadline_secs":"0","client_addr":"10.0.0.15:41229","return_data_bytes":"100"}
+[2023-09-19T02:16:37.966502Z DEBUG worker] Task 0f044175-145b-4f36-8394-ffbf0c437fb6 took 1.11744ms to arrive at worker
+[2023-09-19T02:16:37.966600Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived 0f044175-145b-4f36-8394-ffbf0c437fb6 {"scheduler_worker_delay_secs":"0.00111744","time_to_deadline_secs":"0.184716239","client_id":"08115653-3632-4d8c-b04c-e4aaff5d916a"}
+[2023-09-19T02:16:37.966606Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:37.967983Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted 0f044175-145b-4f36-8394-ffbf0c437fb6 {"start_overhead_secs":"0.00137231","exec_time_secs":"0.1"}
+[2023-09-19T02:16:37.968030Z DEBUG worker] Connecting to client at 10.0.0.14:42077...
+[2023-09-19T02:16:38.068003Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished 0f044175-145b-4f36-8394-ffbf0c437fb6 {"preemptions":"0","exec_time_secs":"0.100017819"}
+[2023-09-19T02:16:38.094732Z DEBUG worker] Connected to client at 10.0.0.14:42077
+[2023-09-19T02:16:38.094798Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler 0f044175-145b-4f36-8394-ffbf0c437fb6 {}
+[2023-09-19T02:16:38.094899Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient 0f044175-145b-4f36-8394-ffbf0c437fb6 {"time_to_deadline_secs":"0.056322063","return_data_bytes":"100","client_addr":"10.0.0.14:42077"}
+[2023-09-19T02:16:38.149082Z DEBUG worker] Task f8cf52f2-e2cc-4ed9-94af-d5e1e4c97b7b took 327.953µs to arrive at worker
+[2023-09-19T02:16:38.149160Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived f8cf52f2-e2cc-4ed9-94af-d5e1e4c97b7b {"client_id":"870f7de0-50a9-4569-9852-8968789c36b7","time_to_deadline_secs":"0.145114179","scheduler_worker_delay_secs":"0.000327953"}
+[2023-09-19T02:16:38.149169Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:38.149632Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted f8cf52f2-e2cc-4ed9-94af-d5e1e4c97b7b {"start_overhead_secs":"0.000460118","exec_time_secs":"0.1"}
+[2023-09-19T02:16:38.149635Z DEBUG worker] Connecting to client at 10.0.0.15:41229...
+[2023-09-19T02:16:38.212107Z DEBUG worker] Connected to client at 10.0.0.15:41229
+[2023-09-19T02:16:38.250173Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished f8cf52f2-e2cc-4ed9-94af-d5e1e4c97b7b {"preemptions":"0","exec_time_secs":"0.10054056"}
+[2023-09-19T02:16:38.250286Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler f8cf52f2-e2cc-4ed9-94af-d5e1e4c97b7b {}
+[2023-09-19T02:16:38.250296Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient f8cf52f2-e2cc-4ed9-94af-d5e1e4c97b7b {"client_addr":"10.0.0.15:41229","return_data_bytes":"100","time_to_deadline_secs":"0.043901172"}
+[2023-09-19T02:16:38.524767Z DEBUG worker] Task f67e1d70-fd7d-46c3-be1a-164b048c394a took 664.03µs to arrive at worker
+[2023-09-19T02:16:38.524900Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived f67e1d70-fd7d-46c3-be1a-164b048c394a {"time_to_deadline_secs":"0.127754291","scheduler_worker_delay_secs":"0.00066403","client_id":"6d7b2a68-1d96-4c80-9695-2df3faf87c37"}
+[2023-09-19T02:16:38.524906Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:38.525349Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted f67e1d70-fd7d-46c3-be1a-164b048c394a {"start_overhead_secs":"0.000438451","exec_time_secs":"0.1"}
+[2023-09-19T02:16:38.525355Z DEBUG worker] Connecting to client at 10.0.0.13:46255...
+[2023-09-19T02:16:38.773630Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished f67e1d70-fd7d-46c3-be1a-164b048c394a {"exec_time_secs":"0.24828262","preemptions":"0"}
+[2023-09-19T02:16:38.774325Z DEBUG worker] Connected to client at 10.0.0.13:46255
+[2023-09-19T02:16:38.774367Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler f67e1d70-fd7d-46c3-be1a-164b048c394a {}
+[2023-09-19T02:16:38.774386Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient f67e1d70-fd7d-46c3-be1a-164b048c394a {"client_addr":"10.0.0.13:46255","return_data_bytes":"100","time_to_deadline_secs":"0"}
+[2023-09-19T02:16:38.776798Z DEBUG worker] Task b3048518-6bce-4157-818d-885d4b14d497 took 0ns to arrive at worker
+[2023-09-19T02:16:38.776861Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived b3048518-6bce-4157-818d-885d4b14d497 {"time_to_deadline_secs":"0","scheduler_worker_delay_secs":"0","client_id":"4c271dbf-c3d0-4232-ac04-6471bb2ba7ba"}
+[2023-09-19T02:16:38.776864Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:38.777288Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted b3048518-6bce-4157-818d-885d4b14d497 {"exec_time_secs":"0.1","start_overhead_secs":"0.000399243"}
+[2023-09-19T02:16:38.777298Z DEBUG worker] Connecting to client at 10.0.0.10:41351...
+[2023-09-19T02:16:38.840926Z DEBUG worker] Connected to client at 10.0.0.10:41351
+[2023-09-19T02:16:38.877818Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished b3048518-6bce-4157-818d-885d4b14d497 {"exec_time_secs":"0.100552186","preemptions":"0"}
+[2023-09-19T02:16:38.877963Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler b3048518-6bce-4157-818d-885d4b14d497 {}
+[2023-09-19T02:16:38.878015Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient b3048518-6bce-4157-818d-885d4b14d497 {"time_to_deadline_secs":"0","return_data_bytes":"100","client_addr":"10.0.0.10:41351"}
+[2023-09-19T02:16:39.064458Z DEBUG worker] Task 93ac5e07-fefc-4215-8e99-70268d9a69cd took 354.036µs to arrive at worker
+[2023-09-19T02:16:39.064486Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived 93ac5e07-fefc-4215-8e99-70268d9a69cd {"scheduler_worker_delay_secs":"0.000354036","client_id":"e3b1d8ea-eacb-4591-9ff2-91e4a4c8bfc8","time_to_deadline_secs":"0.18007388"}
+[2023-09-19T02:16:39.064491Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:39.064963Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted 93ac5e07-fefc-4215-8e99-70268d9a69cd {"exec_time_secs":"0.1","start_overhead_secs":"0.000468076"}
+[2023-09-19T02:16:39.064969Z DEBUG worker] Connecting to client at 10.0.0.6:45117...
+[2023-09-19T02:16:39.112411Z DEBUG worker] Task c25ca130-a8e9-4bd0-bd7d-f14ca4f81b61 took 542.116µs to arrive at worker
+[2023-09-19T02:16:39.112438Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived c25ca130-a8e9-4bd0-bd7d-f14ca4f81b61 {"time_to_deadline_secs":"0.129167324","client_id":"e803635f-97c7-442a-8d26-4fd776954e4e","scheduler_worker_delay_secs":"0.000542116"}
+[2023-09-19T02:16:39.112836Z DEBUG worker] Connecting to client at 10.0.0.7:42891...
+[2023-09-19T02:16:39.114096Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskPreempted 93ac5e07-fefc-4215-8e99-70268d9a69cd {"exec_time_secs":"0.049115633","preemption_overhead_secs":"0.001633931","new_task":"c25ca130-a8e9-4bd0-bd7d-f14ca4f81b61"}
+[2023-09-19T02:16:39.114100Z DEBUG worker] Task queue: [
+        RunningTask {
+            pid: 2171339,
+            task: Task {
+                id: 93ac5e07fefc42158e9970268d9a69cd,
+                rpc_id: 1,
+                client_id: e3b1d8eaeacb45919ff291e4a4c8bfc8,
+                client_addr: 10.0.0.6:45117,
+                deadline: SystemTime {
+                    tv_sec: 1695089799,
+                    tv_nsec: 244530920,
+                },
+                initial_time_to_deadline: 211.074901ms,
+                connection_setup_time: 130.20002ms,
+                worst_case_exec_time: 100ms,
+                actual_exec_time: 100ms,
+                prev_exec_time: 49.115633ms,
+                start_time: Some(
+                    SystemTime {
+                        tv_sec: 1695089799,
+                        tv_nsec: 64960532,
+                    },
+                ),
+                preempt_time: Some(
+                    SystemTime {
+                        tv_sec: 1695089799,
+                        tv_nsec: 114076165,
+                    },
+                ),
+                resume_time: None,
+                finish_time: None,
+                parameters: {
+                    "return_data_bytes": "100",
+                },
+                slack_time: Some(
+                    80.427916ms,
+                ),
+            },
+            task_status: PREEMPTED,
+            preemptions: 1,
+        },
+    ]
+[2023-09-19T02:16:39.114584Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted c25ca130-a8e9-4bd0-bd7d-f14ca4f81b61 {"exec_time_secs":"0.1","start_overhead_secs":"0.00046045"}
+[2023-09-19T02:16:39.127148Z DEBUG worker] Connected to client at 10.0.0.6:45117
+[2023-09-19T02:16:39.174514Z DEBUG worker] Connected to client at 10.0.0.7:42891
+[2023-09-19T02:16:39.215361Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished c25ca130-a8e9-4bd0-bd7d-f14ca4f81b61 {"preemptions":"0","exec_time_secs":"0.100776932"}
+[2023-09-19T02:16:39.215418Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler c25ca130-a8e9-4bd0-bd7d-f14ca4f81b61 {}
+[2023-09-19T02:16:39.215426Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient c25ca130-a8e9-4bd0-bd7d-f14ca4f81b61 {"client_addr":"10.0.0.7:42891","return_data_bytes":"100","time_to_deadline_secs":"0.026152097"}
+[2023-09-19T02:16:39.215438Z DEBUG worker] Resuming preempted task 93ac5e07-fefc-4215-8e99-70268d9a69cd after finishing c25ca130-a8e9-4bd0-bd7d-f14ca4f81b61
+[2023-09-19T02:16:39.215439Z DEBUG worker] Task c25ca130-a8e9-4bd0-bd7d-f14ca4f81b61 took 776.932µs longer than expected adding difference to preempted task
+[2023-09-19T02:16:39.216540Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResumed 93ac5e07-fefc-4215-8e99-70268d9a69cd {"resume_overhead_secs":"0.00110019","exec_time_secs":"0.049892565","preemptions":"1"}
+[2023-09-19T02:16:39.268500Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished 93ac5e07-fefc-4215-8e99-70268d9a69cd {"exec_time_secs":"0.101851942","preemptions":"1"}
+[2023-09-19T02:16:39.268521Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler 93ac5e07-fefc-4215-8e99-70268d9a69cd {}
+[2023-09-19T02:16:39.268529Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient 93ac5e07-fefc-4215-8e99-70268d9a69cd {"client_addr":"10.0.0.6:45117","time_to_deadline_secs":"0","return_data_bytes":"100"}
+[2023-09-19T02:16:39.340820Z DEBUG worker] Task 5e998213-b587-4c5e-86ee-77b1b30bd910 took 312.203µs to arrive at worker
+[2023-09-19T02:16:39.340849Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived 5e998213-b587-4c5e-86ee-77b1b30bd910 {"time_to_deadline_secs":"0.121007916","scheduler_worker_delay_secs":"0.000312203","client_id":"08115653-3632-4d8c-b04c-e4aaff5d916a"}
+[2023-09-19T02:16:39.340853Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:39.341250Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted 5e998213-b587-4c5e-86ee-77b1b30bd910 {"start_overhead_secs":"0.000392494","exec_time_secs":"0.1"}
+[2023-09-19T02:16:39.341258Z DEBUG worker] Connecting to client at 10.0.0.14:42077...
+[2023-09-19T02:16:39.404429Z DEBUG worker] Connected to client at 10.0.0.14:42077
+[2023-09-19T02:16:39.442037Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished 5e998213-b587-4c5e-86ee-77b1b30bd910 {"preemptions":"0","exec_time_secs":"0.10078639"}
+[2023-09-19T02:16:39.442104Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler 5e998213-b587-4c5e-86ee-77b1b30bd910 {}
+[2023-09-19T02:16:39.442124Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient 5e998213-b587-4c5e-86ee-77b1b30bd910 {"client_addr":"10.0.0.14:42077","time_to_deadline_secs":"0.019704951","return_data_bytes":"100"}
+[2023-09-19T02:16:39.503011Z DEBUG worker] Task 9db51202-e373-44ec-a5f2-b1c645d627c0 took 281.579µs to arrive at worker
+[2023-09-19T02:16:39.503038Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived 9db51202-e373-44ec-a5f2-b1c645d627c0 {"time_to_deadline_secs":"0.186377932","scheduler_worker_delay_secs":"0.000281579","client_id":"08115653-3632-4d8c-b04c-e4aaff5d916a"}
+[2023-09-19T02:16:39.503042Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:39.504042Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted 9db51202-e373-44ec-a5f2-b1c645d627c0 {"exec_time_secs":"0.1","start_overhead_secs":"0.000995566"}
+[2023-09-19T02:16:39.504049Z DEBUG worker] Connecting to client at 10.0.0.14:42077...
+[2023-09-19T02:16:39.565638Z DEBUG worker] Connected to client at 10.0.0.14:42077
+[2023-09-19T02:16:39.604152Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished 9db51202-e373-44ec-a5f2-b1c645d627c0 {"exec_time_secs":"0.10011136","preemptions":"0"}
+[2023-09-19T02:16:39.604175Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler 9db51202-e373-44ec-a5f2-b1c645d627c0 {}
+[2023-09-19T02:16:39.604182Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient 9db51202-e373-44ec-a5f2-b1c645d627c0 {"client_addr":"10.0.0.14:42077","return_data_bytes":"100","time_to_deadline_secs":"0.085206799"}
+[2023-09-19T02:16:40.240610Z DEBUG worker] Task 0625d563-3458-41d4-896f-79557da63d2f took 1.114939ms to arrive at worker
+[2023-09-19T02:16:40.240755Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived 0625d563-3458-41d4-896f-79557da63d2f {"time_to_deadline_secs":"0.164282398","scheduler_worker_delay_secs":"0.001114939","client_id":"6d7b2a68-1d96-4c80-9695-2df3faf87c37"}
+[2023-09-19T02:16:40.240762Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:40.241302Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted 0625d563-3458-41d4-896f-79557da63d2f {"start_overhead_secs":"0.000536658","exec_time_secs":"0.1"}
+[2023-09-19T02:16:40.241310Z DEBUG worker] Connecting to client at 10.0.0.13:46255...
+[2023-09-19T02:16:40.303055Z DEBUG worker] Connected to client at 10.0.0.13:46255
+[2023-09-19T02:16:40.342301Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished 0625d563-3458-41d4-896f-79557da63d2f {"preemptions":"0","exec_time_secs":"0.100999761"}
+[2023-09-19T02:16:40.342321Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler 0625d563-3458-41d4-896f-79557da63d2f {}
+[2023-09-19T02:16:40.342330Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient 0625d563-3458-41d4-896f-79557da63d2f {"return_data_bytes":"100","time_to_deadline_secs":"0.062562399","client_addr":"10.0.0.13:46255"}
+[2023-09-19T02:16:40.566343Z DEBUG worker] Task 018d190c-b2ed-44ca-ba05-9e02680841b5 took 371.493µs to arrive at worker
+[2023-09-19T02:16:40.566372Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived 018d190c-b2ed-44ca-ba05-9e02680841b5 {"time_to_deadline_secs":"0.158533876","scheduler_worker_delay_secs":"0.000371493","client_id":"2bf3e277-02d7-409b-bb47-0233de8fb7bf"}
+[2023-09-19T02:16:40.566376Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:40.566787Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted 018d190c-b2ed-44ca-ba05-9e02680841b5 {"exec_time_secs":"0.1","start_overhead_secs":"0.000405827"}
+[2023-09-19T02:16:40.566794Z DEBUG worker] Connecting to client at 10.0.0.11:39231...
+[2023-09-19T02:16:40.577526Z DEBUG worker] Task 64792a95-cf30-4e99-80a9-dabaefbf50cb took 305.953µs to arrive at worker
+[2023-09-19T02:16:40.577621Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived 64792a95-cf30-4e99-80a9-dabaefbf50cb {"client_id":"e803635f-97c7-442a-8d26-4fd776954e4e","scheduler_worker_delay_secs":"0.000305953","time_to_deadline_secs":"0.112830562"}
+[2023-09-19T02:16:40.578387Z DEBUG worker] Connecting to client at 10.0.0.7:42891...
+[2023-09-19T02:16:40.580565Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskPreempted 018d190c-b2ed-44ca-ba05-9e02680841b5 {"exec_time_secs":"0.01377656","preemption_overhead_secs":"0.002934242","new_task":"64792a95-cf30-4e99-80a9-dabaefbf50cb"}
+[2023-09-19T02:16:40.580570Z DEBUG worker] Task queue: [
+        RunningTask {
+            pid: 2171381,
+            task: Task {
+                id: 018d190cb2ed44caba059e02680841b5,
+                rpc_id: 1,
+                client_id: 2bf3e27702d7409bbb470233de8fb7bf,
+                client_addr: 10.0.0.11:39231,
+                deadline: SystemTime {
+                    tv_sec: 1695089800,
+                    tv_nsec: 724875471,
+                },
+                initial_time_to_deadline: 189.097612ms,
+                connection_setup_time: 124.584864ms,
+                worst_case_exec_time: 100ms,
+                actual_exec_time: 100ms,
+                prev_exec_time: 13.77656ms,
+                start_time: Some(
+                    SystemTime {
+                        tv_sec: 1695089800,
+                        tv_nsec: 566783921,
+                    },
+                ),
+                preempt_time: Some(
+                    SystemTime {
+                        tv_sec: 1695089800,
+                        tv_nsec: 580560481,
+                    },
+                ),
+                resume_time: None,
+                finish_time: None,
+                parameters: {
+                    "return_data_bytes": "100",
+                },
+                slack_time: Some(
+                    58.905369ms,
+                ),
+            },
+            task_status: PREEMPTED,
+            preemptions: 1,
+        },
+    ]
+[2023-09-19T02:16:40.581021Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted 64792a95-cf30-4e99-80a9-dabaefbf50cb {"start_overhead_secs":"0.000408743","exec_time_secs":"0.1"}
+[2023-09-19T02:16:40.644855Z DEBUG worker] Connected to client at 10.0.0.7:42891
+[2023-09-19T02:16:40.681659Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished 64792a95-cf30-4e99-80a9-dabaefbf50cb {"exec_time_secs":"0.10063935","preemptions":"0"}
+[2023-09-19T02:16:40.681757Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler 64792a95-cf30-4e99-80a9-dabaefbf50cb {}
+[2023-09-19T02:16:40.681766Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient 64792a95-cf30-4e99-80a9-dabaefbf50cb {"return_data_bytes":"100","time_to_deadline_secs":"0.008590188","client_addr":"10.0.0.7:42891"}
+[2023-09-19T02:16:40.681774Z DEBUG worker] Resuming preempted task 018d190c-b2ed-44ca-ba05-9e02680841b5 after finishing 64792a95-cf30-4e99-80a9-dabaefbf50cb
+[2023-09-19T02:16:40.681775Z DEBUG worker] Task 64792a95-cf30-4e99-80a9-dabaefbf50cb took 639.35µs longer than expected adding difference to preempted task
+[2023-09-19T02:16:40.683067Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResumed 018d190c-b2ed-44ca-ba05-9e02680841b5 {"resume_overhead_secs":"0.001289978","preemptions":"1","exec_time_secs":"0.01441591"}
+[2023-09-19T02:16:40.692621Z DEBUG worker] Connected to client at 10.0.0.11:39231
+[2023-09-19T02:16:40.771936Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished 018d190c-b2ed-44ca-ba05-9e02680841b5 {"exec_time_secs":"0.10328275","preemptions":"1"}
+[2023-09-19T02:16:40.772081Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler 018d190c-b2ed-44ca-ba05-9e02680841b5 {}
+[2023-09-19T02:16:40.772103Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient 018d190c-b2ed-44ca-ba05-9e02680841b5 {"return_data_bytes":"100","time_to_deadline_secs":"0","client_addr":"10.0.0.11:39231"}
+[2023-09-19T02:16:40.772449Z DEBUG worker] Task d0247efc-6b58-46a4-a03a-9de7e5d239a3 took 311.078µs to arrive at worker
+[2023-09-19T02:16:40.772471Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived d0247efc-6b58-46a4-a03a-9de7e5d239a3 {"time_to_deadline_secs":"0.178628696","client_id":"6d7b2a68-1d96-4c80-9695-2df3faf87c37","scheduler_worker_delay_secs":"0.000311078"}
+[2023-09-19T02:16:40.772474Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:40.772946Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted d0247efc-6b58-46a4-a03a-9de7e5d239a3 {"start_overhead_secs":"0.000467617","exec_time_secs":"0.1"}
+[2023-09-19T02:16:40.772952Z DEBUG worker] Connecting to client at 10.0.0.13:46255...
+[2023-09-19T02:16:40.835592Z DEBUG worker] Connected to client at 10.0.0.13:46255
+[2023-09-19T02:16:40.874057Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished d0247efc-6b58-46a4-a03a-9de7e5d239a3 {"exec_time_secs":"0.101110551","preemptions":"0"}
+[2023-09-19T02:16:40.874108Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler d0247efc-6b58-46a4-a03a-9de7e5d239a3 {}
+[2023-09-19T02:16:40.874128Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient d0247efc-6b58-46a4-a03a-9de7e5d239a3 {"return_data_bytes":"100","client_addr":"10.0.0.13:46255","time_to_deadline_secs":"0.076952112"}
+[2023-09-19T02:16:41.128052Z DEBUG worker] Task 7b2406b5-7a7a-4335-b75c-75e8d46d911f took 943.734µs to arrive at worker
+[2023-09-19T02:16:41.128091Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived 7b2406b5-7a7a-4335-b75c-75e8d46d911f {"client_id":"e803635f-97c7-442a-8d26-4fd776954e4e","time_to_deadline_secs":"0.14459317","scheduler_worker_delay_secs":"0.000943734"}
+[2023-09-19T02:16:41.128096Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:41.128716Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted 7b2406b5-7a7a-4335-b75c-75e8d46d911f {"start_overhead_secs":"0.000615532","exec_time_secs":"0.1"}
+[2023-09-19T02:16:41.128723Z DEBUG worker] Connecting to client at 10.0.0.7:42891...
+[2023-09-19T02:16:41.192178Z DEBUG worker] Connected to client at 10.0.0.7:42891
+[2023-09-19T02:16:41.229146Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished 7b2406b5-7a7a-4335-b75c-75e8d46d911f {"exec_time_secs":"0.100431146","preemptions":"0"}
+[2023-09-19T02:16:41.229175Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler 7b2406b5-7a7a-4335-b75c-75e8d46d911f {}
+[2023-09-19T02:16:41.229183Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient 7b2406b5-7a7a-4335-b75c-75e8d46d911f {"client_addr":"10.0.0.7:42891","time_to_deadline_secs":"0.043461327","return_data_bytes":"100"}
+[2023-09-19T02:16:41.290474Z DEBUG worker] Task c5f64462-ccbd-45e0-bfe3-004da2bbe8d5 took 285.787µs to arrive at worker
+[2023-09-19T02:16:41.290524Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived c5f64462-ccbd-45e0-bfe3-004da2bbe8d5 {"client_id":"e803635f-97c7-442a-8d26-4fd776954e4e","time_to_deadline_secs":"0.196802354","scheduler_worker_delay_secs":"0.000285787"}
+[2023-09-19T02:16:41.290530Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:41.290903Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted c5f64462-ccbd-45e0-bfe3-004da2bbe8d5 {"start_overhead_secs":"0.000369743","exec_time_secs":"0.1"}
+[2023-09-19T02:16:41.290910Z DEBUG worker] Connecting to client at 10.0.0.7:42891...
+[2023-09-19T02:16:41.352984Z DEBUG worker] Connected to client at 10.0.0.7:42891
+[2023-09-19T02:16:41.391924Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished c5f64462-ccbd-45e0-bfe3-004da2bbe8d5 {"exec_time_secs":"0.101018844","preemptions":"0"}
+[2023-09-19T02:16:41.392039Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler c5f64462-ccbd-45e0-bfe3-004da2bbe8d5 {}
+[2023-09-19T02:16:41.392086Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient c5f64462-ccbd-45e0-bfe3-004da2bbe8d5 {"return_data_bytes":"100","client_addr":"10.0.0.7:42891","time_to_deadline_secs":"0.095192644"}
+[2023-09-19T02:16:41.943344Z DEBUG worker] Task ec26d561-8d94-43ff-a62e-d09be480db25 took 325.786µs to arrive at worker
+[2023-09-19T02:16:41.943819Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived ec26d561-8d94-43ff-a62e-d09be480db25 {"time_to_deadline_secs":"0.185074143","scheduler_worker_delay_secs":"0.000325786","client_id":"4c271dbf-c3d0-4232-ac04-6471bb2ba7ba"}
+[2023-09-19T02:16:41.943857Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:41.944237Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted ec26d561-8d94-43ff-a62e-d09be480db25 {"start_overhead_secs":"0.000371243","exec_time_secs":"0.1"}
+[2023-09-19T02:16:41.944245Z DEBUG worker] Connecting to client at 10.0.0.10:41351...
+[2023-09-19T02:16:42.006095Z DEBUG worker] Connected to client at 10.0.0.10:41351
+[2023-09-19T02:16:42.045233Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished ec26d561-8d94-43ff-a62e-d09be480db25 {"exec_time_secs":"0.100995678","preemptions":"0"}
+[2023-09-19T02:16:42.045293Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler ec26d561-8d94-43ff-a62e-d09be480db25 {}
+[2023-09-19T02:16:42.045363Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient ec26d561-8d94-43ff-a62e-d09be480db25 {"client_addr":"10.0.0.10:41351","time_to_deadline_secs":"0.083057232","return_data_bytes":"100"}
+[2023-09-19T02:16:42.129605Z DEBUG worker] Task 8aae696a-ed30-484b-835f-fa52e6b4f8a2 took 536.157µs to arrive at worker
+[2023-09-19T02:16:42.129681Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskReceived 8aae696a-ed30-484b-835f-fa52e6b4f8a2 {"scheduler_worker_delay_secs":"0.000536157","client_id":"e3b1d8ea-eacb-4591-9ff2-91e4a4c8bfc8","time_to_deadline_secs":"0.172098948"}
+[2023-09-19T02:16:42.129686Z DEBUG worker] Task queue: []
+[2023-09-19T02:16:42.130116Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationStarted 8aae696a-ed30-484b-835f-fa52e6b4f8a2 {"exec_time_secs":"0.1","start_overhead_secs":"0.000425868"}
+[2023-09-19T02:16:42.130124Z DEBUG worker] Connecting to client at 10.0.0.6:45117...
+[2023-09-19T02:16:42.192621Z DEBUG worker] Connected to client at 10.0.0.6:45117
+[2023-09-19T02:16:42.230785Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskCalculationFinished 8aae696a-ed30-484b-835f-fa52e6b4f8a2 {"exec_time_secs":"0.100670558","preemptions":"0"}
+[2023-09-19T02:16:42.230813Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskFinishedSentToScheduler 8aae696a-ed30-484b-835f-fa52e6b4f8a2 {}
+[2023-09-19T02:16:42.230821Z TRACE utils] METRIC 59f20523-7b42-4b05-891e-1c2c9a2532d3 WorkerTaskResultSentToClient 8aae696a-ed30-484b-835f-fa52e6b4f8a2 {"return_data_bytes":"100","client_addr":"10.0.0.6:45117","time_to_deadline_secs":"0.070883065"}
+[2023-09-19T02:17:06.472236Z INFO  launcher] Stopping
